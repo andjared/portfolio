@@ -5,11 +5,13 @@ import WorkExperience from "./components/WorkExperience";
 import Intro from "./components/Intro";
 import Header from "./components/Header";
 import Contact from "./components/Contact";
+import SideBar from "./components/SideBar";
 
 function App() {
   return (
     <main className="App" id="home">
       <Header />
+      <SideBar />
       <Intro />
       <AboutMe />
       <Projects />
