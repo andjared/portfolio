@@ -1,0 +1,55 @@
+@use "../../styles/vars.scss";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  font-family: vars.$font-mono;
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 50px;
+    /* position: relative; */
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .links {
+      display: flex;
+      align-items: center;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        li {
+          margin: 0rem 1rem;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: vars.$green;
+        padding: 1rem;
+        font-size: vars.$fs-md;
+        &:hover {
+          color: vars.$lightest-slate;
+        }
+      }
+      .resume {
+        margin-left: 15px;
+        border: 1px solid vars.$green;
+        border-radius: 4px;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@charset "UTF-8";
+.section {
+  max-width: 1200px;
+}
+.section .inner {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 50px;
+}
+.section .inner .text p {
+  margin: 0px 0px 10px;
+  text-align: justify;
+}
+.section .inner .text .stack {
+  color: #64ffda;
+}
+.section .inner .list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  gap: 0px 10px;
+  margin: 20px 0px 0px;
+  padding: 0;
+}
+.section .inner .list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  margin-bottom: 10px;
+}
+.section .inner .list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: #64ffda;
+}
+.section .inner .image {
+  max-width: 300px;
+  position: relative;
+}
+.section .inner .image .wrapper {
+  width: 100%;
+  position: relative;
+}
+.section .inner .image .wrapper::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: 2px solid #64ffda;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.section .inner .image .wrapper img {
+  max-width: 100%;
+  display: block;
+}/*# sourceMappingURL=AboutMe.module.css.map */

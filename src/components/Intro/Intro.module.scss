@@ -1,0 +1,34 @@
+@use "../../styles/vars.scss";
+.intro {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  .small {
+    font-family: vars.$font-mono;
+    font-size: clamp(vars.$fs-sm, 5vw, vars.$fs-md);
+    font-weight: 400;
+    color: vars.$green;
+  }
+  .big {
+    font-family: vars.$font-sans;
+    font-size: clamp(40px, 8vw, 80px);
+  }
+  .name {
+    color: vars.$lightest-slate;
+    margin: 0px;
+  }
+  .subheading {
+    margin-top: 10px;
+    line-height: 0.9;
+    color: vars.$slate;
+  }
+
+  .text {
+    margin: vars.$fs-xl 0px 0px;
+    max-width: 540px;
+  }
+}

@@ -1,0 +1,62 @@
+@use "../../styles/vars.scss";
+
+.section {
+  max-width: 1200px;
+  .inner {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+    .text {
+      p {
+        margin: 0px 0px 10px;
+        text-align: justify;
+      }
+      .stack {
+        color: vars.$green;
+      }
+    }
+    .list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(140px, 200px));
+      gap: 0px 10px;
+      margin: 20px 0px 0px;
+      padding: 0;
+      li {
+        position: relative;
+        padding-left: 20px;
+        font-size: vars.$fs-sm;
+        font-family: vars.$font-mono;
+        margin-bottom: 10px;
+        &::before {
+          content: "▹";
+          position: absolute;
+          left: 0px;
+          color: vars.$green;
+        }
+      }
+    }
+    .image {
+      max-width: 300px;
+      position: relative;
+      .wrapper {
+        width: 100%;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          border: 2px solid vars.$green;
+          height: 100%;
+          width: 100%;
+          z-index: -1;
+        }
+        img {
+          max-width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+}

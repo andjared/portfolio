@@ -1,0 +1,52 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0px 50px;
+  /* position: relative; */
+}
+.header .nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .nav .links {
+  display: flex;
+  align-items: center;
+}
+.header .nav .links ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.header .nav .links ul li {
+  margin: 0rem 1rem;
+}
+.header .nav .links a {
+  text-decoration: none;
+  color: #64ffda;
+  padding: 1rem;
+  font-size: 16px;
+}
+.header .nav .links a:hover {
+  color: #ccd6f6;
+}
+.header .nav .links .resume {
+  margin-left: 15px;
+  border: 1px solid #64ffda;
+  border-radius: 4px;
+}/*# sourceMappingURL=Header.module.css.map */
