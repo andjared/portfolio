@@ -17,7 +17,6 @@
   align-items: center;
   width: 100%;
   padding: 0px 50px;
-  /* position: relative; */
 }
 .header .nav .logo {
   display: flex;
@@ -41,6 +40,7 @@
   color: #64ffda;
   padding: 1rem;
   font-size: 16px;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .header .nav .links a:hover {
   color: #ccd6f6;

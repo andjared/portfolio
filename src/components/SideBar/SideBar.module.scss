@@ -20,6 +20,7 @@
   }
   a {
     padding: 10px;
+    transition: vars.$transition;
     &:hover {
       color: vars.$green;
     }
@@ -32,6 +33,9 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    li {
+      font-size: vars.$fs-md;
+    }
   }
 }
 .right {

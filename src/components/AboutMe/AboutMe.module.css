@@ -56,4 +56,7 @@
 .section .inner .image .wrapper img {
   max-width: 100%;
   display: block;
+}
+.section .inner .image .wrapper img:hover {
+  filter: brightness(120%) drop-shadow(4px 4px 8px #8892b0);
 }/*# sourceMappingURL=AboutMe.module.css.map */
