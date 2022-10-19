@@ -8,10 +8,12 @@
   min-height: 100px;
   z-index: 1;
   display: flex;
+  -webkit-box-pack: justify;
   justify-content: space-between;
   font-size: 20px;
   transition: vars.$transition;
   font-family: vars.$font-mono;
+  box-shadow: 0 10px 30px -10px vars.$navy-shadow;
   .nav {
     display: flex;
     justify-content: space-between;

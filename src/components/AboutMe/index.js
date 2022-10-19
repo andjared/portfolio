@@ -5,7 +5,7 @@ import image from "../../assets/portfolio_image.jpg";
 export default function AboutMe() {
   return (
     <section id="about" className={styles.section}>
-      <h2 className={`heading ${styles.heading}`}>About me</h2>
+      <h2 className="heading">About me</h2>
       <div className={styles.inner}>
         <div>
           <div className={styles.text}>

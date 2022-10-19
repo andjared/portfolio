@@ -1,0 +1,71 @@
+.list {
+  list-style: none;
+}
+.list .project {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  -webkit-box-align: center;
+  position: relative;
+  gap: 10px;
+}
+.list .project:not(:last-of-type) {
+  margin-bottom: 100px;
+}
+.list .project .content {
+  grid-area: 1/1/-1/7;
+  z-index: 1;
+}
+.list .project .content .overline {
+  margin: 10px 0px;
+  color: #64ffda;
+  font-size: 13px;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+.list .project .content .title {
+  font-size: clamp(24px, 5vw, 28px);
+  color: #ccd6f6;
+  margin: 0px 0px 20px;
+  font-weight: 600;
+}
+.list .project .content .description {
+  background-color: #233554;
+  color: #a8b2d1;
+  padding: 25px;
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  border-radius: 4px;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: 2;
+}
+.list .project .content .tech {
+  margin: 25px 0px 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+}
+.list .project .content .tech li {
+  margin: 0px 20px 5px 0px;
+  font-size: 13px;
+  color: #a8b2d1;
+  white-space: nowrap;
+}
+.list .project .image {
+  grid-area: 1/6/-1/-1;
+  box-shadow: 10px 30px -15px rgba(2, 12, 27, 0.7);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: 1;
+}
+.list .project .image .wrapper {
+  background-color: #64ffda;
+  border-radius: 4px;
+  height: 100%;
+  max-width: 100%;
+  filter: grayscale(50%) contrast(3) brightness(70%);
+}
+.list .project .image .wrapper img {
+  max-width: 700px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=Projects.module.css.map */

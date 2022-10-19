@@ -14,6 +14,7 @@
     color: vars.$green;
   }
   .big {
+    margin: 0px;
     font-family: vars.$font-sans;
     font-size: clamp(40px, 8vw, 80px);
   }
