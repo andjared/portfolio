@@ -11,8 +11,7 @@ body {
   background-color: #0a192f;
   color: #8892b0;
   font-size: 16px;
-  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
-    system-ui, sans-serif;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
   line-height: 1.3;
   height: 100%;
   width: 100%;
@@ -26,10 +25,8 @@ main {
 }
 main section {
   margin: 0px auto;
-  min-height: 100vh;
   max-width: 1200px;
-  padding: 150px 0px 0px 0px;
-  opacity: 11;
+  padding: 150px 0px 0px;
 }
 main section h2 {
   display: flex;
@@ -56,4 +53,5 @@ main a {
   text-decoration: none;
   display: inline-block;
   color: inherit;
-} /*# sourceMappingURL=styles.css.map */
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}/*# sourceMappingURL=styles.css.map */

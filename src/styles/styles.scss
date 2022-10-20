@@ -24,10 +24,8 @@ main {
   padding: 0px 100px;
   section {
     margin: 0px auto;
-    min-height: 100vh;
     max-width: 1200px;
     padding: 150px 0px 0px;
-    opacity: 11;
     h2 {
       display: flex;
       align-items: center;
@@ -56,5 +54,6 @@ main {
     text-decoration: none;
     display: inline-block;
     color: inherit;
+    transition: vars.$transition;
   }
 }

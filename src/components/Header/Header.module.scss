@@ -1,12 +1,14 @@
 @use "../../styles/vars.scss";
-
+.hidden {
+  display: none;
+}
 .header {
   position: fixed;
   top: 0;
   left: 0;
   min-width: 100%;
   min-height: 100px;
-  z-index: 1;
+  z-index: 11;
   display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
@@ -14,6 +16,8 @@
   transition: vars.$transition;
   font-family: vars.$font-mono;
   box-shadow: 0 10px 30px -10px vars.$navy-shadow;
+  background-color: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(10px);
   .nav {
     display: flex;
     justify-content: space-between;

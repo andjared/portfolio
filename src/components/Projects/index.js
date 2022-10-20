@@ -6,8 +6,8 @@ import { GitHub, ExternalLink } from "react-feather";
 export default function Projects() {
   console.log(data);
   return (
-    <section id="projects">
-      <h2 className="heading">Projects</h2>
+    <section id="projects" className={styles.projects}>
+      <h2 className="heading">Some Things I've done</h2>
       <ul className={styles.list}>
         {data.map((project, index) => {
           return (
@@ -37,7 +37,7 @@ export default function Projects() {
                   <ul className={styles.links}>
                     <li>
                       <a
-                        href={project.web}
+                        href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -46,7 +46,7 @@ export default function Projects() {
                     </li>
                     <li>
                       <a
-                        href={project.github}
+                        href={project.web}
                         target="_blank"
                         rel="noopener noreferrer"
                       >

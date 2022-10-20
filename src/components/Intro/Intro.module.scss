@@ -1,5 +1,6 @@
 @use "../../styles/vars.scss";
 .intro {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   -webkit-box-pack: center;

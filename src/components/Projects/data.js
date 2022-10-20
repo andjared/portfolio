@@ -1,19 +1,4 @@
-import img1 from "../../assets/drv_screenshot.png";
-
 export const data = [
-  {
-    img: require("../../assets/drv_screenshot.png"),
-    title: "Dr Vo Shop",
-    description: `
-            This is a web shop for small business. Worked in a small team involved in front end development.
-            Some of my tasks included pagination, extracting styles in CSS modules, working with Google
-            Analytics, Bootstrap, etc. This project is live, but still in development.
-           `,
-    tech: ["React.js", "Sass", "CSS modules", "Bootstrap"],
-
-    github: "https://github.com/andjared",
-    web: "https://drvoshop.com/",
-  },
   {
     img: require("../../assets/drv_screenshot.png"),
     title: "Land Essence",
@@ -26,5 +11,18 @@ export const data = [
 
     github: "https://github.com/andjared/multi-language-website",
     web: "https://landessence.netlify.app/",
+  },
+  {
+    img: require("../../assets/drv_screenshot.png"),
+    title: "Dr Vo Shop",
+    description: `
+            This is a web shop for small business. Worked in a small team involved in front end development.
+            Some of my tasks included pagination, extracting styles in CSS modules, working with Google
+            Analytics, Bootstrap, etc. This project is live, but still in development.
+           `,
+    tech: ["React.js", "Sass", "CSS modules", "Bootstrap"],
+
+    github: "https://github.com/andjared",
+    web: "https://drvoshop.com/",
   },
 ];
