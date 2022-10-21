@@ -56,4 +56,8 @@ main {
     color: inherit;
     transition: vars.$transition;
   }
+  button {
+    border: 0px;
+    cursor: pointer;
+  }
 }

@@ -54,4 +54,8 @@ main a {
   display: inline-block;
   color: inherit;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+main button {
+  border: 0px;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

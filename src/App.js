@@ -1,7 +1,7 @@
 import "./styles/styles.scss";
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
-import WorkExperience from "./components/WorkExperience";
+import Work from "./components/Work";
 import Intro from "./components/Intro";
 import Header from "./components/Header";
 import Contact from "./components/Contact";
@@ -27,9 +27,8 @@ function App() {
       <SideBar />
       <Intro />
       <AboutMe />
+      <Work />
       <Projects />
-
-      <WorkExperience />
       <Contact />
     </main>
   );

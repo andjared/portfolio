@@ -39,7 +39,7 @@ export default function Header() {
               <a href="#projects">Projects</a>
             </li>
             <li>
-              <a href="#work-experience"> Work Experience</a>
+              <a href="#work-experience">Work Experience</a>
             </li>
             <li>
               <a href="#contact">Contact</a>
