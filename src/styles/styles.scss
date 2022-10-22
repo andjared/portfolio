@@ -4,6 +4,29 @@
   margin: 0;
   padding: 0;
 }
+
+//webkit scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: vars.$slate;
+  border-radius: 5px;
+  border: 2px solid vars.$navy;
+}
+::-webkit-scrollbar-track {
+  background-color: vars.$navy;
+  margin-block: 5px;
+}
+
+//firefox scrollbar support
+@supports (scrollbar-color: slate navy) {
+  * {
+    scrollbar-color: vars.$slate vars.$navy;
+    scrollbar-width: thin;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
