@@ -1,10 +1,30 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import resume from "../../assets/resume.pdf";
 import styles from "./Header.module.scss";
 
 export default function Header() {
+  //hide navbar while scrolling down
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const handleScroll = () => {
+    if (window.scrollY > lastScrollY) {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+    // remember current page location to use in the next move
+    setLastScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <header className={styles.header}>
+    <header className={show ? styles.header : styles.hidden}>
       <nav className={styles.nav}>
         <a href="#home">
           <div className={styles.logo}></div>
@@ -19,7 +39,7 @@ export default function Header() {
               <a href="#projects">Projects</a>
             </li>
             <li>
-              <a href="#work-experience"> Work Experience</a>
+              <a href="#work-experience">Work Experience</a>
             </li>
             <li>
               <a href="#contact">Contact</a>

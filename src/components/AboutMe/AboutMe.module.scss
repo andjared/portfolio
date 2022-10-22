@@ -1,7 +1,9 @@
 @use "../../styles/vars.scss";
 
 .section {
-  max-width: 1200px;
+  max-width: 900px;
+  padding: 100px 0px;
+  opacity: 1;
   .inner {
     display: grid;
     grid-template-columns: 3fr 2fr;

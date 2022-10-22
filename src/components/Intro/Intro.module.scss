@@ -1,5 +1,6 @@
 @use "../../styles/vars.scss";
 .intro {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   -webkit-box-pack: center;
@@ -14,6 +15,7 @@
     color: vars.$green;
   }
   .big {
+    margin: 0px;
     font-family: vars.$font-sans;
     font-size: clamp(40px, 8vw, 80px);
   }

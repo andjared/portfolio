@@ -1,4 +1,5 @@
 .intro {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   -webkit-box-pack: center;
@@ -14,6 +15,7 @@
   color: #64ffda;
 }
 .intro .big {
+  margin: 0px;
   font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
   font-size: clamp(40px, 8vw, 80px);
 }

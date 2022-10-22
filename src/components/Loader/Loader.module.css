@@ -5,7 +5,7 @@
   place-content: center;
 }
 .wrapper .loader {
-  width: 200px;
+  width: 250px;
   aspect-ratio: 8/5;
   -webkit-mask: no-repeat radial-gradient(#000 68%, rgba(0, 0, 0, 0) 71%), no-repeat radial-gradient(#000 68%, rgba(0, 0, 0, 0) 71%), no-repeat radial-gradient(#000 68%, rgba(0, 0, 0, 0) 71%);
   -webkit-mask-size: 25% 40%;

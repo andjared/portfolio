@@ -21,17 +21,14 @@ body {
 main {
   width: 100%;
   min-height: 100vh;
-  padding: 0px 150px;
+  padding: 0px 100px;
 }
-
-section {
+main section {
   margin: 0px auto;
-  min-height: 100vh;
   max-width: 1200px;
-  padding: 100px 0px;
-  opacity: 1;
+  padding: 150px 0px 0px;
 }
-section h2 {
+main section h2 {
   display: flex;
   align-items: center;
   -webkit-box-align: center;
@@ -43,7 +40,7 @@ section h2 {
   white-space: nowrap;
   line-height: 1.1;
 }
-section .heading::after {
+main section .heading::after {
   content: "";
   display: block;
   position: relative;
@@ -52,9 +49,13 @@ section .heading::after {
   background-color: #233554;
   margin-left: 20px;
 }
-
-a {
+main a {
   text-decoration: none;
   display: inline-block;
   color: inherit;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+main button {
+  border: 0px;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
