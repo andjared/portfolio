@@ -1,6 +1,6 @@
 export const data = [
   {
-    img: require("../../assets/drv_screenshot.png"),
+    img: require("../../assets/landessence.jpg"),
     title: "Land Essence",
     description: `
            This is a website for landscape architecture studio. Worked
@@ -13,7 +13,7 @@ export const data = [
     web: "https://landessence.netlify.app/",
   },
   {
-    img: require("../../assets/drv_screenshot.png"),
+    img: require("../../assets/drvo.jpg"),
     title: "Dr Vo Shop",
     description: `
             This is a web shop for small business. Worked in a small team involved in front end development.

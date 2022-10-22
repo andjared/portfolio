@@ -14,7 +14,7 @@ export default function Projects() {
             <li key={index} className={styles.project}>
               <div className={styles.image}>
                 <a
-                  href="https://drvoshop.com/"
+                  href={project.web}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.wrapper}

@@ -27,8 +27,9 @@ function App() {
       <SideBar />
       <Intro />
       <AboutMe />
-      <Work />
+
       <Projects />
+      <Work />
       <Contact />
     </main>
   );
