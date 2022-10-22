@@ -70,12 +70,9 @@
 }
 .projects .list .project .image .wrapper {
   max-width: 700px;
-  background-color: #64ffda;
   border-radius: 4px;
   height: 100%;
   max-width: 100%;
-  filter: grayscale(50%) contrast(3) brightness(70%);
-  mix-blend-mode: multiply;
 }
 .projects .list .project .image .wrapper img {
   width: 100%;

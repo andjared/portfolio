@@ -3,6 +3,27 @@
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8892b0;
+  border-radius: 5px;
+  border: 2px solid #0a192f;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0a192f;
+  margin-block: 5px;
+}
+
+@supports (scrollbar-color: slate navy) {
+  * {
+    scrollbar-color: #8892b0 #0a192f;
+    scrollbar-width: thin;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
