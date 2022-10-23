@@ -4,7 +4,6 @@ import { data } from "./data.js";
 import { GitHub, ExternalLink } from "react-feather";
 
 export default function Projects() {
-  console.log(data);
   return (
     <section id="projects" className={styles.projects}>
       <h2 className="heading">Some Things I've done</h2>
@@ -35,15 +34,18 @@ export default function Projects() {
                 </ul>
                 <div className={project.links}>
                   <ul className={styles.links}>
-                    <li>
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <GitHub size={25} />
-                      </a>
-                    </li>
+                    {project.github && (
+                      <li>
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <GitHub size={25} />
+                        </a>
+                      </li>
+                    )}
+
                     <li>
                       <a
                         href={project.web}
