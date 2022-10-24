@@ -30,6 +30,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   background-color: vars.$saphire;
   color: vars.$slate;
@@ -39,6 +40,18 @@ body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+  transition: vars.$transition;
 }
 
 main {
@@ -60,8 +73,6 @@ main {
       color: vars.$lightest-slate;
       white-space: nowrap;
       line-height: 1.1;
-
-      // top: 3px;
     }
     .heading::after {
       content: "";
@@ -73,12 +84,7 @@ main {
       margin-left: 20px;
     }
   }
-  a {
-    text-decoration: none;
-    display: inline-block;
-    color: inherit;
-    transition: vars.$transition;
-  }
+
   button {
     border: 0px;
     cursor: pointer;
