@@ -9,6 +9,7 @@ import SideBar from "./components/SideBar";
 import Loader from "./components/Loader";
 import { useState } from "react";
 import { useEffect } from "react";
+import Footer from "./components/Footer";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -22,16 +23,18 @@ function App() {
   return loading ? (
     <Loader />
   ) : (
-    <main id="home">
-      <Header />
+    <div className="container">
       <SideBar />
-      <Intro />
-      <AboutMe />
-
-      <Projects />
-      <Work />
-      <Contact />
-    </main>
+      <main id="home">
+        <Header />
+        <Intro />
+        <AboutMe />
+        <Projects />
+        <Work />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   );
 }
 
