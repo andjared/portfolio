@@ -1,0 +1,28 @@
+@use "../../styles/vars.scss";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 100px 0px 20px 0px;
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    .mail,
+    .phone {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: vars.$american-silver;
+      span {
+        display: inline-block;
+        margin-left: 8px;
+        color: vars.$slate;
+      }
+    }
+  }
+}
