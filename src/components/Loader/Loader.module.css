@@ -9,7 +9,7 @@
   aspect-ratio: 8/5;
   -webkit-mask: no-repeat radial-gradient(#000 68%, rgba(0, 0, 0, 0) 71%), no-repeat radial-gradient(#000 68%, rgba(0, 0, 0, 0) 71%), no-repeat radial-gradient(#000 68%, rgba(0, 0, 0, 0) 71%);
   -webkit-mask-size: 25% 40%;
-  background: conic-gradient(#8892b0 50%, #ccd6f6 0) no-repeat, conic-gradient(#64ffda 50%, #64ffda 0) no-repeat;
+  background: conic-gradient(rgb(212, 227, 237) 50%, #d3d0cb 0) no-repeat, conic-gradient(#f3db74 50%, #f3db74 0) no-repeat;
   background-size: 200% 50%;
   -webkit-animation: back 4s infinite steps(2), load 2s infinite;
           animation: back 4s infinite steps(2), load 2s infinite;

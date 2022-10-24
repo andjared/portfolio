@@ -11,7 +11,8 @@
     -webkit-mask-size: 25% 40%;
     background: conic-gradient(vars.$slate 50%, vars.$lightest-slate 0)
         no-repeat,
-      conic-gradient(vars.$green 50%, vars.$green 0) no-repeat;
+      conic-gradient(vars.$american-silver 50%, vars.$american-silver 0)
+        no-repeat;
     background-size: 200% 50%;
     animation: back 4s infinite steps(2), load 2s infinite;
   }

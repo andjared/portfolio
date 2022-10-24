@@ -15,8 +15,8 @@
   font-size: 20px;
   transition: vars.$transition;
   font-family: vars.$font-mono;
-  box-shadow: 0 10px 30px -10px vars.$navy-shadow;
-  background-color: rgba(10, 25, 47, 0.85);
+  box-shadow: 0 10px 30px -10px vars.$saphire-shadow;
+  background-color: vars.$saphire;
   backdrop-filter: blur(10px);
   .nav {
     display: flex;
@@ -42,7 +42,7 @@
       }
       a {
         text-decoration: none;
-        color: vars.$green;
+        color: vars.$american-silver;
         padding: 1rem;
         font-size: vars.$fs-md;
         transition: vars.$transition;
@@ -52,7 +52,7 @@
       }
       .resume {
         margin-left: 15px;
-        border: 1px solid vars.$green;
+        border: 1px solid vars.$american-silver;
         border-radius: 4px;
       }
     }

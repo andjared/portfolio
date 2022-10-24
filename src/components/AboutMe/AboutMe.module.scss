@@ -14,7 +14,7 @@
         text-align: justify;
       }
       .stack {
-        color: vars.$green;
+        color: vars.$american-silver;
       }
     }
     .list {
@@ -34,7 +34,7 @@
           content: "▹";
           position: absolute;
           left: 0px;
-          color: vars.$green;
+          color: vars.$american-silver;
         }
       }
     }
@@ -49,7 +49,7 @@
           position: absolute;
           top: 20px;
           left: 20px;
-          border: 2px solid vars.$green;
+          border: 2px solid vars.$american-silver;
           height: 100%;
           width: 100%;
           z-index: -1;

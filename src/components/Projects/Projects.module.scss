@@ -18,7 +18,7 @@
         z-index: 1;
         .overline {
           margin: 10px 0px;
-          color: vars.$green;
+          color: vars.$american-silver;
           font-size: vars.$fs-xs;
           font-family: vars.$font-mono;
         }
@@ -29,10 +29,10 @@
           font-weight: 600;
         }
         .description {
-          background-color: vars.$lightest-navy;
-          color: vars.$light-slate;
+          background-color: vars.$lightest-slate;
+          color: vars.$saphire;
           padding: 25px;
-          box-shadow: 0 10px 30px -15px vars.$navy-shadow;
+          box-shadow: 0 10px 30px -15px vars.$saphire-shadow;
           border-radius: vars.$border-radius;
           transition: vars.$transition;
           z-index: 2;
@@ -47,7 +47,7 @@
           li {
             margin: 0px 20px 5px 0px;
             font-size: vars.$fs-xs;
-            color: vars.$light-slate;
+            color: vars.$cadet-grey;
             white-space: nowrap;
           }
         }
@@ -62,7 +62,7 @@
       }
       .image {
         grid-area: 1 / 6 / -1 / -1;
-        box-shadow: 10px 30px -15px vars.$navy-shadow;
+        box-shadow: 10px 30px -15px vars.$saphire-shadow;
         transition: vars.$transition;
         z-index: 1;
         .wrapper {

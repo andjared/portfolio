@@ -14,8 +14,8 @@
   font-size: 20px;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-  box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
-  background-color: rgba(10, 25, 47, 0.85);
+  box-shadow: 0 10px 30px -10px rgba(2, 39, 59, 0.5);
+  background-color: #2e5266;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -45,16 +45,16 @@
 }
 .header .nav .links a {
   text-decoration: none;
-  color: #64ffda;
+  color: #f3db74;
   padding: 1rem;
   font-size: 16px;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .header .nav .links a:hover {
-  color: #ccd6f6;
+  color: #d3d0cb;
 }
 .header .nav .links .resume {
   margin-left: 15px;
-  border: 1px solid #64ffda;
+  border: 1px solid #f3db74;
   border-radius: 4px;
 }/*# sourceMappingURL=Header.module.css.map */
