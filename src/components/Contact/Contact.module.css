@@ -1,5 +1,5 @@
 .contact {
-  max-width: 900px;
+  max-width: 1200px;
 }
 .contact form {
   min-height: 340px;
@@ -13,16 +13,22 @@
   margin-top: 5px;
 }
 .contact form input,
-.contact form textarea {
+.contact form textarea,
+.contact form button[type=submit] {
   padding: 10px;
-  border: 2px solid #ccd6f6;
+  border: 1px solid #f3db74;
   outline: none;
 }
-.contact form input[type=submit] {
-  min-width: 100px;
+.contact form input {
+  max-width: 50%;
 }
-.contact form input[type=submit]:hover {
-  background-color: #ccd6f6;
+.contact form button[type=submit] {
+  min-width: 100px;
+  color: #2e5266;
+  font-weight: 600;
+}
+.contact form button[type=submit]:hover {
+  background-color: #f3db74;
 }
 .contact form textarea {
   min-width: 50%;
