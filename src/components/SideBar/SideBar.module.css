@@ -2,7 +2,7 @@
   width: 40px;
   position: fixed;
   bottom: 0;
-  color: #8892b0;
+  color: rgb(212, 227, 237);
   z-index: 10;
 }
 
@@ -13,7 +13,7 @@
 }
 .wrapper::after {
   content: "";
-  background-color: #ccd6f6;
+  background-color: #d3d0cb;
   display: block;
   width: 1px;
   height: 90px;
@@ -23,7 +23,7 @@
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .wrapper a:hover {
-  color: #64ffda;
+  color: #f3db74;
 }
 
 .left {

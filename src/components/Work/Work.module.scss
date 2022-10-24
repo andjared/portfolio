@@ -16,7 +16,7 @@
         display: flex;
         align-items: center;
         -webkit-box-align: center;
-        border-left: 2px solid vars.$lightest-navy;
+        border-left: 2px solid vars.$lightest-saphire;
         padding: 0px 20px 2px;
         background-color: transparent;
         color: vars.$slate;
@@ -26,11 +26,12 @@
         &:hover,
         &:active,
         &:focus {
-          color: vars.$green;
+          background-color: vars.$cadet-grey;
+          color: vars.$saphire;
         }
         &:focus {
-          background-color: vars.$lightest-navy;
-          border-color: vars.$green;
+          background-color: vars.$slate;
+          border-color: vars.$american-silver;
         }
       }
     }
@@ -51,11 +52,11 @@
           color: vars.$lightest-slate;
         }
         .company {
-          color: vars.$green;
+          color: vars.$american-silver;
         }
       }
       .range {
-        color: vars.$light-slate;
+        color: vars.$cadet-grey;
         margin-bottom: 20px;
         font-size: vars.$fs-xs;
         font-family: vars.$font-mono;
@@ -69,7 +70,7 @@
             content: "▹";
             position: absolute;
             left: 0px;
-            color: vars.$green;
+            color: vars.$american-silver;
           }
         }
       }

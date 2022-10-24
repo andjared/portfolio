@@ -20,20 +20,21 @@
   display: flex;
   align-items: center;
   -webkit-box-align: center;
-  border-left: 2px solid #233554;
+  border-left: 2px solid rgb(145, 202, 232);
   padding: 0px 20px 2px;
   background-color: transparent;
-  color: #8892b0;
+  color: rgb(212, 227, 237);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   text-align: left;
   white-space: nowrap;
 }
 .work .inner .jobs .job:hover, .work .inner .jobs .job:active, .work .inner .jobs .job:focus {
-  color: #64ffda;
+  background-color: #9fb1bc;
+  color: #2e5266;
 }
 .work .inner .jobs .job:focus {
-  background-color: #233554;
-  border-color: #64ffda;
+  background-color: rgb(212, 227, 237);
+  border-color: #f3db74;
 }
 .work .inner .description {
   position: relative;
@@ -49,13 +50,13 @@
 }
 .work .inner .description h3 .role {
   font-size: 22px;
-  color: #ccd6f6;
+  color: #d3d0cb;
 }
 .work .inner .description h3 .company {
-  color: #64ffda;
+  color: #f3db74;
 }
 .work .inner .description .range {
-  color: #a8b2d1;
+  color: #9fb1bc;
   margin-bottom: 20px;
   font-size: 13px;
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
@@ -71,7 +72,7 @@
   content: "▹";
   position: absolute;
   left: 0px;
-  color: #64ffda;
+  color: #f3db74;
 }
 .work .inner .hidden {
   display: none;

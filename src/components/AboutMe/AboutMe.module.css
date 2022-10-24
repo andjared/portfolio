@@ -14,7 +14,7 @@
   text-align: justify;
 }
 .section .inner .text .stack {
-  color: #64ffda;
+  color: #f3db74;
 }
 .section .inner .list {
   list-style: none;
@@ -35,7 +35,7 @@
   content: "▹";
   position: absolute;
   left: 0px;
-  color: #64ffda;
+  color: #f3db74;
 }
 .section .inner .image {
   max-width: 300px;
@@ -50,7 +50,7 @@
   position: absolute;
   top: 20px;
   left: 20px;
-  border: 2px solid #64ffda;
+  border: 2px solid #f3db74;
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -60,5 +60,5 @@
   display: block;
 }
 .section .inner .image .wrapper img:hover {
-  filter: brightness(120%) drop-shadow(4px 4px 8px #8892b0);
+  filter: brightness(120%) drop-shadow(4px 4px 8px rgb(212, 227, 237));
 }/*# sourceMappingURL=AboutMe.module.css.map */

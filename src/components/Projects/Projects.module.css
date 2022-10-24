@@ -21,21 +21,21 @@
 }
 .projects .list .project .content .overline {
   margin: 10px 0px;
-  color: #64ffda;
+  color: #f3db74;
   font-size: 13px;
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
 }
 .projects .list .project .content .title {
   font-size: clamp(24px, 5vw, 28px);
-  color: #ccd6f6;
+  color: #d3d0cb;
   margin: 0px 0px 20px;
   font-weight: 600;
 }
 .projects .list .project .content .description {
-  background-color: #233554;
-  color: #a8b2d1;
+  background-color: #d3d0cb;
+  color: #2e5266;
   padding: 25px;
-  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  box-shadow: 0 10px 30px -15px rgba(2, 39, 59, 0.5);
   border-radius: 4px;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   z-index: 2;
@@ -51,7 +51,7 @@
 .projects .list .project .content .tech li {
   margin: 0px 20px 5px 0px;
   font-size: 13px;
-  color: #a8b2d1;
+  color: #9fb1bc;
   white-space: nowrap;
 }
 .projects .list .project .content .links {
@@ -60,11 +60,11 @@
 }
 .projects .list .project .content .links li {
   margin: 0px 20px 5px 0px;
-  color: #ccd6f6;
+  color: #d3d0cb;
 }
 .projects .list .project .image {
   grid-area: 1/6/-1/-1;
-  box-shadow: 10px 30px -15px rgba(2, 12, 27, 0.7);
+  box-shadow: 10px 30px -15px rgba(2, 39, 59, 0.5);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   z-index: 1;
 }
