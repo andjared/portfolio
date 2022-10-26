@@ -1,32 +1,27 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import styles from "./Contact.module.scss";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  const form = useRef();
-
-  const [defaultValues, setDefaultValues] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
   const handleChange = (e) => {
-    setDefaultValues({
-      ...defaultValues,
-      [e.target.id]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const sendEmail = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
+    console.log(formData);
     emailjs
       .sendForm(
         "service_oysq5fy",
-        "template_kg2kc2p",
-        form.current,
-        "user_9qqtok280efSdKKxVi3aV"
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        e.target,
+        process.env.REACT_APP_EMAILJS_USER_ID
       )
       .then(
         (result) => {
@@ -35,28 +30,30 @@ export default function Contact() {
         },
         (error) => {
           console.log(error.text);
+          //add error message
         }
       );
   };
+
   return (
     <section id="contact" className={styles.contact}>
       <h2 className="heading">Get in touch</h2>
-      <form ref={form} onSubmit={sendEmail}>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input
           type="text"
           name="name"
           id="name"
-          value={defaultValues.name}
           onChange={handleChange}
+          value={formData.name || ""}
         />
         <label htmlFor="email">Email:</label>
         <input
           type="email"
           name="email"
           id="email"
-          value={defaultValues.email}
           onChange={handleChange}
+          value={formData.email || ""}
         />
 
         <label htmlFor="message" id="message">
@@ -65,9 +62,9 @@ export default function Contact() {
         <textarea
           name="message"
           id="message"
-          rows="4"
-          value={defaultValues.message}
+          rows="8"
           onChange={handleChange}
+          value={formData.message || ""}
         />
 
         <button type="submit" value="submit">

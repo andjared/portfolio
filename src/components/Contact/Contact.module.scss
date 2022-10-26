@@ -2,6 +2,7 @@
 
 .contact {
   max-width: 1200px;
+  padding: 100px 0px 0px;
   form {
     min-height: 340px;
     display: flex;
@@ -10,17 +11,18 @@
     justify-content: space-around;
     label {
       display: block;
-      margin-top: 5px;
+      margin: 5px 0px;
     }
     input,
     textarea,
     button[type="submit"] {
-      padding: 10px;
+      padding: 15px;
       border: 1px solid vars.$american-silver;
       outline: none;
+      color: vars.$american-silver;
     }
     input {
-      max-width: 50%;
+      width: 40%;
     }
     button[type="submit"] {
       min-width: 100px;
@@ -31,8 +33,9 @@
       }
     }
     textarea {
-      min-width: 50%;
-      max-width: 100%;
+      width: 60%;
+      resize: vertical;
+      margin-bottom: 5px;
     }
   }
 }

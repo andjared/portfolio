@@ -1,5 +1,6 @@
 .contact {
   max-width: 1200px;
+  padding: 100px 0px 0px;
 }
 .contact form {
   min-height: 340px;
@@ -20,7 +21,7 @@
   outline: none;
 }
 .contact form input {
-  max-width: 50%;
+  width: 40%;
 }
 .contact form button[type=submit] {
   min-width: 100px;
@@ -31,6 +32,5 @@
   background-color: #f3db74;
 }
 .contact form textarea {
-  min-width: 50%;
-  max-width: 100%;
+  width: 40%;
 }/*# sourceMappingURL=Contact.module.css.map */
