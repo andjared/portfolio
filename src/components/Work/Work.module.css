@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .work {
-  max-width: 700px;
+  max-width: 900px;
 }
 .work .inner {
   display: flex;
@@ -29,11 +29,11 @@
   white-space: nowrap;
 }
 .work .inner .jobs .job:hover, .work .inner .jobs .job:active, .work .inner .jobs .job:focus {
-  background-color: #9fb1bc;
+  background-color: rgb(212, 227, 237);
   color: #2e5266;
 }
 .work .inner .jobs .job:focus {
-  background-color: rgb(212, 227, 237);
+  background-color: #d3d0cb;
   border-color: #f3db74;
 }
 .work .inner .description {

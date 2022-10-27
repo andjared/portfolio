@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 //webkit scrollbar
@@ -58,6 +59,7 @@ main {
   width: 100%;
   min-height: 100vh;
   padding: 0px 100px;
+  position: relative;
   section {
     margin: 0px auto;
     max-width: 1200px;

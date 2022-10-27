@@ -1,0 +1,36 @@
+.contact {
+  max-width: 1200px;
+  padding: 100px 0px 0px;
+}
+.contact form {
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.contact form label {
+  display: block;
+  margin-top: 5px;
+}
+.contact form input,
+.contact form textarea,
+.contact form button[type=submit] {
+  padding: 10px;
+  border: 1px solid #f3db74;
+  outline: none;
+}
+.contact form input {
+  width: 40%;
+}
+.contact form button[type=submit] {
+  min-width: 100px;
+  color: #2e5266;
+  font-weight: 600;
+}
+.contact form button[type=submit]:hover {
+  background-color: #f3db74;
+}
+.contact form textarea {
+  width: 40%;
+}/*# sourceMappingURL=Contact.module.css.map */

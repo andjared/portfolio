@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 100px 0px 20px 0px;
+}
+.wrapper .contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+.wrapper .contact .mail,
+.wrapper .contact .phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f3db74;
+}
+.wrapper .contact .mail span,
+.wrapper .contact .phone span {
+  display: inline-block;
+  margin-left: 8px;
+  color: rgb(212, 227, 237);
+}/*# sourceMappingURL=Footer.module.css.map */

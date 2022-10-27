@@ -22,7 +22,7 @@ export const data = [
            `,
     tech: ["React.js", "Sass", "CSS modules", "Bootstrap"],
 
-    github: "https://github.com/andjared",
+    // github: "https://github.com/andjared",
     web: "https://drvoshop.com/",
   },
 ];
