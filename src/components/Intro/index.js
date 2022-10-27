@@ -17,7 +17,7 @@ export default function Intro() {
       </div>
       <div>
         <p className={styles.text}>
-          Self-taught front end developer. Currently looking for an entry level
+          Self-taught frontend developer. Currently looking for an entry level
           position or internship opportunity.
         </p>
       </div>
