@@ -17,8 +17,9 @@ export default function AboutMe() {
             </p>
             <p>
               I am constantly looking for ways to improve my coding skills and I
-              am actively searching for internships that could help me nurture
-              my passion via immersion in the enterprise world.
+              am actively searching for entry level positions or internships
+              that could help me nurture my passion via immersion in the
+              enterprise world.
             </p>
             <p>
               What excites the most about coding is the fact that I can make an
@@ -30,7 +31,7 @@ export default function AboutMe() {
           </div>
 
           <ul className={styles.list}>
-            <li>JavaScript</li>
+            <li>JavaScript (ES6+)</li>
             <li>React</li>
             <li>HTML5</li>
             <li>CSS3</li>

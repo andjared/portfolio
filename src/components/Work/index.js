@@ -47,7 +47,7 @@ export default function Work() {
           </h3>
           <p className={styles.range}>October 2016 - June 2017</p>
           <ul>
-            <li>Client communication, business correspondence,</li>
+            <li>Client communication, business correspondence</li>
             <li>Contracts and billing</li>
             <li>Office supplies procurement</li>
           </ul>
