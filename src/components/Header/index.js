@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import resume from "../../assets/resume.pdf";
 import styles from "./Header.module.scss";
+import { Home } from "react-feather";
 
 export default function Header() {
   //hide navbar while scrolling down
@@ -27,7 +28,9 @@ export default function Header() {
     <header className={show ? styles.header : styles.hidden}>
       <nav className={styles.nav}>
         <a href="#home">
-          <div className={styles.logo}></div>
+          <div className={styles.logo}>
+            <Home size={25} />
+          </div>
         </a>
 
         <div className={styles.links}>
