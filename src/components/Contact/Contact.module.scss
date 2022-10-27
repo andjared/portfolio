@@ -3,15 +3,24 @@
 .contact {
   max-width: 1200px;
   padding: 100px 0px 0px;
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 100px;
+  }
+  .disabled {
+    pointer-events: none;
+    opacity: 0.8;
+  }
   form {
-    min-height: 340px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
     label {
       display: block;
-      margin: 5px 0px;
+      margin: 8px 0px;
     }
     input,
     textarea,
@@ -19,10 +28,12 @@
       padding: 15px;
       border: 1px solid vars.$american-silver;
       outline: none;
-      color: vars.$american-silver;
     }
     input {
-      width: 40%;
+      width: 100%;
+      &::placeholder {
+        color: vars.$saphire;
+      }
     }
     button[type="submit"] {
       min-width: 100px;
@@ -33,9 +44,34 @@
       }
     }
     textarea {
-      width: 60%;
+      width: 100%;
       resize: vertical;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
+    }
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-items: flex-start; // justify-content: space-around;
+    // gap: 20px;
+    .mail,
+    .phone,
+    .address {
+      display: flex;
+      max-width: 100%;
+      a {
+        display: flex;
+      }
+      // // justify-content: space-evenly;
+      // align-items: flex-start;
+      color: vars.$american-silver;
+      span {
+        font-size: vars.$fs-lg;
+        display: inline-block;
+        margin-left: 10px;
+        color: vars.$slate;
+      }
     }
   }
 }
