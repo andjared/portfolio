@@ -79,4 +79,12 @@
       display: none;
     }
   }
+  @media screen and (max-width: 600px) {
+    .inner {
+      flex-direction: column;
+      .jobs {
+        width: 100%;
+      }
+    }
+  }
 }
