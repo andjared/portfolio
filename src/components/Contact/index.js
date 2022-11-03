@@ -84,10 +84,6 @@ export default function Contact() {
         </form>
 
         <div className={styles.info}>
-          <div className={styles.address}>
-            <MapPin size={25} />
-            <span>Stara Pazova, Serbia</span>
-          </div>
           <div className={styles.mail}>
             <a href={"mailto:zelenbaba.andja@gmail.com"}>
               <Mail size={25} />
@@ -99,6 +95,10 @@ export default function Contact() {
               <Phone size={25} />
               <span>+381652040432</span>
             </a>
+          </div>
+          <div className={styles.address}>
+            <MapPin size={25} />
+            <span>Stara Pazova, Serbia</span>
           </div>
         </div>
       </div>

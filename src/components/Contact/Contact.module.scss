@@ -2,12 +2,15 @@
 
 .contact {
   max-width: 1200px;
-  padding: 100px 0px 0px;
+
   .container {
     width: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 100px;
+    @media screen and (max-width: 1080px) {
+      gap: 40px;
+    }
   }
   .disabled {
     pointer-events: none;
@@ -51,10 +54,11 @@
   }
   .info {
     display: flex;
+    margin: auto;
     flex-direction: column;
-    justify-content: space-around;
-    justify-items: flex-start; // justify-content: space-around;
-    // gap: 20px;
+    align-items: flex-start;
+    justify-items: center;
+    gap: 20px;
     .mail,
     .phone,
     .address {
@@ -63,8 +67,6 @@
       a {
         display: flex;
       }
-      // // justify-content: space-evenly;
-      // align-items: flex-start;
       color: vars.$american-silver;
       span {
         font-size: vars.$fs-lg;
@@ -72,6 +74,16 @@
         margin-left: 10px;
         color: vars.$slate;
       }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    margin: 0px auto 50px;
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+    .info {
+      display: none;
     }
   }
 }

@@ -27,16 +27,18 @@
 }
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  min-height: 100vh;
 }
 
 body {
+  width: 100%;
+  min-height: 100vh;
   background-color: #2e5266;
   color: rgb(212, 227, 237);
   font-size: 16px;
   font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
   line-height: 1.3;
-  height: 100%;
-  width: 100%;
   overflow-x: hidden;
 }
 
@@ -55,13 +57,13 @@ a {
 main {
   width: 100%;
   min-height: 100vh;
-  padding: 0px 100px;
+  padding: 0px 150px;
   position: relative;
 }
 main section {
   margin: 0px auto;
   max-width: 1200px;
-  padding: 150px 0px 0px;
+  padding: 100px 0px 0px;
 }
 main section h2 {
   display: flex;
@@ -87,4 +89,19 @@ main section .heading::after {
 main button {
   border: 0px;
   cursor: pointer;
+}
+@media screen and (max-width: 1080px) {
+  main {
+    padding: 0px 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    padding: 0px 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  main {
+    padding: 0px 25px;
+  }
 }/*# sourceMappingURL=styles.css.map */

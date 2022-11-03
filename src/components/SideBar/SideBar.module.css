@@ -5,6 +5,11 @@
   color: rgb(212, 227, 237);
   z-index: 10;
 }
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
 
 .wrapper {
   display: flex;

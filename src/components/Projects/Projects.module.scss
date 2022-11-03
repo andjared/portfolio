@@ -1,6 +1,11 @@
 @use "../../styles/vars.scss";
 .projects {
   max-width: 1200px;
+  @media screen and (max-width: 320px) {
+    .heading {
+      font-size: vars.$fs-xxl;
+    }
+  }
   .list {
     list-style: none;
     .project {
@@ -10,12 +15,41 @@
       -webkit-box-align: center;
       position: relative;
       gap: 10px;
+
       &:not(:last-of-type) {
         margin-bottom: 100px;
+        @media screen and (max-width: 1080px) {
+          margin-bottom: 70px;
+        }
+        @media (max-width: 480px) {
+          margin-bottom: 30px;
+        }
       }
+
       .content {
-        grid-area: 1 / 1 / -1 / 7;
-        z-index: 1;
+        pointer-events: none;
+        position: relative;
+        grid-column: 1 / 7;
+        grid-row: 1 / -1;
+        z-index: 2;
+
+        @media screen and (max-width: 1080px) {
+          grid-column: 1 / 9;
+        }
+        @media screen and (max-width: 768px) {
+          display: flex;
+          height: 100%;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          justify-content: center;
+          padding: 40px 40px 30px;
+          grid-column: 1 / -1;
+          z-index: 5;
+          text-align: left;
+        }
+        @media (max-width: 480px) {
+          padding: 30px 25px 20px;
+        }
         .overline {
           margin: 10px 0px;
           color: vars.$american-silver;
@@ -25,8 +59,11 @@
         .title {
           font-size: clamp(24px, 5vw, 28px);
           color: vars.$lightest-slate;
-          margin: 0px 0px 20px;
+          margin: 0px 0px 10px;
           font-weight: 600;
+          @media screen and (max-width: 768px) {
+            margin: 0px 0px 20px;
+          }
         }
         .description {
           background-color: vars.$lightest-slate;
@@ -36,44 +73,104 @@
           border-radius: vars.$border-radius;
           transition: vars.$transition;
           z-index: 2;
+          text-align: justify;
+          @media screen and (max-width: 768px) {
+            color: vars.$lightest-slate;
+            padding: 20px 0px;
+            background-color: transparent;
+            box-shadow: none;
+          }
         }
         .tech {
           margin: 25px 0px 10px;
           display: flex;
-          flex-wrap: nowrap;
+          flex-wrap: wrap;
           justify-content: flex-start;
           align-items: center;
           list-style: none;
+          @media screen and (max-width: 768px) {
+            padding: 10px 0px;
+          }
           li {
             margin: 0px 20px 5px 0px;
             font-size: vars.$fs-xs;
             color: vars.$cadet-grey;
             white-space: nowrap;
           }
+
+          @media (max-width: 768px) {
+            margin: 10px 0;
+            li {
+              margin: 0 10px 5px 0;
+              color: vars.$lightest-slate;
+            }
+          }
         }
         .links {
           list-style: none;
           display: flex;
-          li {
-            margin: 0px 20px 5px 0px;
-            color: vars.$lightest-slate;
+          display: flex;
+          align-items: center;
+          position: relative;
+          margin-top: 10px;
+          margin-left: -10px;
+          color: vars.$lightest-slate;
+          a {
+            display: flex;
+            padding: 10px;
           }
         }
       }
       .image {
-        grid-area: 1 / 6 / -1 / -1;
+        grid-column: 6 / -1;
+        grid-row: 1 / -1;
         box-shadow: 10px 30px -15px vars.$saphire-shadow;
         transition: vars.$transition;
         z-index: 1;
-        .wrapper {
-          max-width: 700px;
+        position: relative;
+        background-color: vars.$saphire;
+
+        @media screen and (max-width: 768px) {
+          grid-column: 1/-1;
+          height: 100%;
+          opacity: 0.25;
+        }
+        a {
           border-radius: vars.$border-radius;
           height: 100%;
-          max-width: 100%;
-          img {
+          width: 100%;
+          vertical-align: middle;
+          background-color: vars.$slate;
+          &:hover {
+            background-color: transparent;
+            outline: 0;
+          }
+          .container {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            max-width: 100%;
+            vertical-align: middle;
+            filter: drop-shadow(16px 16px 10px vars.$saphire-shadow)
+              contrast(80%);
+            &:hover {
+              filter: none;
+            }
+
+            @media screen and (max-width: 768px) {
+              object-fit: cover;
+              width: auto;
+              height: 100%;
+            }
+            img {
+              width: 100%;
+              max-width: none;
+              height: 100%;
+              object-fit: cover;
+              vertical-align: middle;
+
+              @media screen and (max-width: 768px) {
+                filter: grayscale(100%) contrast(1) brightness(50%);
+              }
+            }
           }
         }
       }

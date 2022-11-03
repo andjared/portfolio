@@ -4,7 +4,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  -webkit-box-align: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   padding: 100px 0px 20px 0px;
+  p {
+    color: vars.$american-silver;
+    span {
+      color: vars.$lightest-slate;
+    }
+  }
+  .social {
+    display: none;
+    @media screen and (max-width: 768px) {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li a {
+        font-size: vars.$fs-xl;
+        padding: 12px;
+        // color: vars.$american-silver;
+      }
+    }
+  }
 }

@@ -30,6 +30,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #f3db74;
 }
 .header .nav .links {
   display: flex;

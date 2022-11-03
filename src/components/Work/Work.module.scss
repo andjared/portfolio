@@ -40,12 +40,12 @@
       position: relative;
       width: 100%;
       margin-left: 20px;
-      // padding: 10px 5px;
+
       transition: vars.$transition;
       h3 {
         font-size: vars.$fs-xl;
         font-weight: 500;
-        margin-bottom: 2px;
+        margin-bottom: 5px;
         line-height: 1.3;
         .role {
           font-size: vars.$fs-xxl;
@@ -77,6 +77,17 @@
     }
     .hidden {
       display: none;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .inner {
+      flex-direction: column;
+      .jobs {
+        width: 100%;
+      }
+      .description {
+        margin: 0;
+      }
     }
   }
 }
