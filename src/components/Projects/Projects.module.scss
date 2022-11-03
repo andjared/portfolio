@@ -1,6 +1,11 @@
 @use "../../styles/vars.scss";
 .projects {
   max-width: 1200px;
+  @media screen and (max-width: 320px) {
+    .heading {
+      font-size: vars.$fs-xxl;
+    }
+  }
   .list {
     list-style: none;
     .project {
@@ -79,7 +84,7 @@
         .tech {
           margin: 25px 0px 10px;
           display: flex;
-          flex-wrap: nowrap;
+          flex-wrap: wrap;
           justify-content: flex-start;
           align-items: center;
           list-style: none;
@@ -170,19 +175,5 @@
         }
       }
     }
-    // @media screen and (max-width: 768px) {
-    //   .project {
-    //     display: flex;
-    //     height: 100%;
-    //     flex-direction: column;
-    //     -webkit-box-pack: center;
-    //     justify-content: center;
-    //     padding: 40px 40px 30px;
-    //     grid-column: 1 / -1;
-    //     &:not(:last-of-type) {
-    //       margin-bottom: 40px;
-    //     }
-    //   }
-    // }
   }
 }

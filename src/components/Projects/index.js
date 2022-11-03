@@ -6,7 +6,7 @@ import { GitHub, ExternalLink } from "react-feather";
 export default function Projects() {
   return (
     <section id="projects" className={styles.projects}>
-      <h2 className="heading">Some Things I've done</h2>
+      <h2 className={`heading ${styles.heading}`}>Some Things I've done</h2>
       <ul className={styles.list}>
         {data.map((project, index) => {
           return (
