@@ -40,6 +40,11 @@
   max-width: 300px;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .section .inner .image {
+    margin: 50px auto 0px;
+  }
+}
 .section .inner .image .wrapper {
   width: 100%;
   position: relative;
@@ -60,4 +65,13 @@
 }
 .section .inner .image .wrapper img:hover {
   filter: brightness(120%) drop-shadow(4px 4px 8px rgb(212, 227, 237));
+}
+@media screen and (max-width: 768px) {
+  .section .inner {
+    display: block;
+  }
+  .section .inner .image {
+    margin: 50px auto 0px;
+    width: 70%;
+  }
 }/*# sourceMappingURL=AboutMe.module.css.map */

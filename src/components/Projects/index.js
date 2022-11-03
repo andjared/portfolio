@@ -12,30 +12,27 @@ export default function Projects() {
           return (
             <li key={index} className={styles.project}>
               <div className={styles.image}>
-                <a
-                  href={project.web}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.wrapper}
-                >
-                  <img src={project.img} alt={project.img} />
+                <a href={project.web} target="_blank" rel="noopener noreferrer">
+                  <div className={styles.container}>
+                    <img src={project.img} alt={project.img} />
+                  </div>
                 </a>
               </div>
               <div className={styles.content}>
-                <p className={styles.overline}>Featured Project</p>
-                <h3 className={styles.title}>{project.title}</h3>
-                <div className={styles.description}>
-                  <p>{project.description}</p>
-                </div>
-                <ul className={styles.tech}>
-                  {project.tech.map((item, index) => {
-                    return <li key={index}>{item}</li>;
-                  })}
-                </ul>
-                <div className={project.links}>
-                  <ul className={styles.links}>
-                    {project.github && (
-                      <li>
+                <div>
+                  <p className={styles.overline}>Featured Project</p>
+                  <h3 className={styles.title}>{project.title}</h3>
+                  <div className={styles.description}>
+                    <p>{project.description}</p>
+                  </div>
+                  <ul className={styles.tech}>
+                    {project.tech.map((item, index) => {
+                      return <li key={index}>{item}</li>;
+                    })}
+                  </ul>
+                  <div className={styles.links}>
+                    <>
+                      {project.github && (
                         <a
                           href={project.github}
                           target="_blank"
@@ -43,10 +40,7 @@ export default function Projects() {
                         >
                           <GitHub size={25} />
                         </a>
-                      </li>
-                    )}
-
-                    <li>
+                      )}
                       <a
                         href={project.web}
                         target="_blank"
@@ -54,8 +48,8 @@ export default function Projects() {
                       >
                         <ExternalLink size={25} />
                       </a>
-                    </li>
-                  </ul>
+                    </>
+                  </div>
                 </div>
               </div>
             </li>
