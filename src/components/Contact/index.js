@@ -10,6 +10,7 @@ export default function Contact() {
     message: "",
   });
   const [isSubmiting, setIsSubmiting] = useState(false);
+
   const handleChange = (e) => {
     //set data for each input value
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -24,7 +25,7 @@ export default function Contact() {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_ysq5fy",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         e.target,
         process.env.REACT_APP_EMAILJS_USER_ID
