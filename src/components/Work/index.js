@@ -3,22 +3,37 @@ import { useState } from "react";
 import styles from "./Work.module.scss";
 
 export default function Work() {
-  //togle between jobs
-  const [showJob, setShowJob] = useState(true);
+  const [isActive, setIsActive] = useState("first");
 
   return (
     <section id="work-experience" className={styles.work}>
       <h2 className="heading">Work experience</h2>
       <div className={styles.inner}>
         <div className={styles.jobs}>
-          <button className={styles.job} onClick={() => setShowJob(true)}>
+          <button
+            className={
+              isActive === "first"
+                ? `${styles.btn} ${styles.active}`
+                : styles.btn
+            }
+            onClick={() => setIsActive("first")}
+          >
             <span>Department for missing persons</span>
           </button>
-          <button className={styles.job} onClick={() => setShowJob(false)}>
+          <button
+            className={
+              isActive === "second"
+                ? `${styles.btn} ${styles.active}`
+                : styles.btn
+            }
+            onClick={() => setIsActive("second")}
+          >
             <span>Driving school Vidana</span>
           </button>
         </div>
-        <div className={showJob ? styles.description : styles.hidden}>
+        <div
+          className={isActive === "first" ? styles.description : styles.hidden}
+        >
           <h3>
             <span className={styles.role}>Police Inspector</span>
             <span className={styles.company}>
@@ -38,7 +53,10 @@ export default function Work() {
             <li>Producing daily and monthly reports</li>
           </ul>
         </div>
-        <div className={showJob ? styles.hidden : styles.description}>
+        <div
+          id="second"
+          className={isActive === "second" ? styles.description : styles.hidden}
+        >
           <h3>
             <span className={styles.role}>Office Administrator</span>
             <span className={styles.company}>
