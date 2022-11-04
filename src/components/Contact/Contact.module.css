@@ -1,6 +1,10 @@
 .contact {
   max-width: 1200px;
-  padding: 100px 0px 0px;
+}
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 80px 0px 20px;
+  }
 }
 .contact .container {
   width: 100%;
@@ -11,12 +15,6 @@
 @media screen and (max-width: 1080px) {
   .contact .container {
     gap: 40px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .contact .container {
-    display: flex;
-    flex-direction: column;
   }
 }
 .contact .disabled {
@@ -73,11 +71,6 @@
   justify-items: center;
   gap: 20px;
 }
-@media screen and (max-width: 768px) {
-  .contact .info {
-    display: none;
-  }
-}
 .contact .info .mail,
 .contact .info .phone,
 .contact .info .address {
@@ -97,4 +90,16 @@
   display: inline-block;
   margin-left: 10px;
   color: rgb(212, 227, 237);
+}
+@media screen and (max-width: 768px) {
+  .contact {
+    margin: 0px auto 50px;
+  }
+  .contact .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact .info {
+    display: none;
+  }
 }/*# sourceMappingURL=Contact.module.css.map */

@@ -14,7 +14,7 @@
   width: -moz-max-content;
   width: max-content;
 }
-.work .inner .jobs .job {
+.work .inner .jobs .btn {
   width: 100%;
   height: 42px;
   display: flex;
@@ -28,11 +28,12 @@
   text-align: left;
   white-space: nowrap;
 }
-.work .inner .jobs .job:hover, .work .inner .jobs .job:active, .work .inner .jobs .job:focus {
+.work .inner .jobs .btn:hover {
   background-color: rgb(212, 227, 237);
   color: #2e5266;
 }
-.work .inner .jobs .job:focus {
+.work .inner .jobs .active {
+  color: #2e5266;
   background-color: #d3d0cb;
   border-color: #f3db74;
 }
@@ -45,7 +46,7 @@
 .work .inner .description h3 {
   font-size: 20px;
   font-weight: 500;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
   line-height: 1.3;
 }
 .work .inner .description h3 .role {
@@ -76,4 +77,15 @@
 }
 .work .inner .hidden {
   display: none;
+}
+@media screen and (max-width: 600px) {
+  .work .inner {
+    flex-direction: column;
+  }
+  .work .inner .jobs {
+    width: 100%;
+  }
+  .work .inner .description {
+    margin: 0;
+  }
 }/*# sourceMappingURL=Work.module.css.map */

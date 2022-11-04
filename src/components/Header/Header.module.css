@@ -11,6 +11,7 @@
   z-index: 11;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 20px;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
@@ -18,44 +19,149 @@
   background-color: #2e5266;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  padding-left: 20px;
 }
-.header .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0px 50px;
+@media screen and (max-width: 780px) {
+  .header {
+    min-height: 70px;
+  }
 }
-.header .nav .logo {
+.header .home {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #f3db74;
 }
-.header .nav .links {
-  display: flex;
-  align-items: center;
+.header .hiddenNav {
+  display: none;
 }
-.header .nav .links ul {
+.header .nav {
   display: flex;
   justify-content: space-between;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 0px 50px;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+@media screen and (max-width: 1080px) {
+  .header .nav {
+    padding: 0px 40px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .header .nav {
+    padding: 0px 20px;
+  }
+}
+.header .nav .navLinks {
+  display: flex;
+}
+.header .nav .navLinks ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   list-style: none;
 }
-.header .nav .links ul li {
-  margin: 0rem 1rem;
+.header .nav .navLinks ul li {
+  margin: 0px 10px;
 }
-.header .nav .links a {
+.header .nav .navLinks a {
   text-decoration: none;
   color: #f3db74;
-  padding: 1rem;
+  padding: 16px;
   font-size: 16px;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-.header .nav .links a:hover {
+.header .nav .navLinks a:hover {
   color: #d3d0cb;
 }
-.header .nav .links .resume {
+@media screen and (max-width: 1080px) {
+  .header .nav .navLinks a {
+    padding: 8px;
+  }
+}
+.header .nav .navLinks .resume {
   margin-left: 15px;
   border: 1px solid #f3db74;
   border-radius: 4px;
+}
+.header .nav .btn {
+  display: none;
+}
+.header .nav .hiddenMenu {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header .nav .navLinks {
+    display: none;
+  }
+  .header .nav .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    color: #f3db74;
+  }
+  .header .hiddenNav {
+    display: block;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: min(40vw, 400px);
+    background-color: #2e5266;
+    box-shadow: -10px 0px 30px -15px rgba(2, 39, 59, 0.5);
+  }
+  .header .hiddenNav .navLinks {
+    display: none;
+  }
+  .header .hiddenNav .hiddenMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-box-align: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .header .hiddenNav .hiddenMenu button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #f3db74;
+    background: none;
+  }
+  .header .hiddenNav .hiddenMenu .hiddenMenuLinks {
+    text-align: center;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: clamp(14px, 4vw, 18px);
+    color: #d3d0cb;
+  }
+  .header .hiddenNav .hiddenMenu .hiddenMenuLinks ul {
+    list-style: none;
+  }
+  .header .hiddenNav .hiddenMenu .hiddenMenuLinks ul li {
+    margin: 0px auto 10px;
+  }
+  .header .hiddenNav .hiddenMenu .hiddenMenuLinks ul li a {
+    text-decoration: none;
+    padding: 3px 20px 20px;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  .header .hiddenNav .hiddenMenu .hiddenMenuLinks ul li a:hover {
+    color: #f3db74;
+  }
+  .header .hiddenNav .hiddenMenu .hiddenMenuLinks .resume {
+    padding: 12px 20px;
+    margin: 10% auto 0px;
+    border: 1px solid #f3db74;
+    border-radius: 4px;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  .header .hiddenNav .hiddenMenu .hiddenMenuLinks .resume:hover {
+    color: #f3db74;
+  }
 }/*# sourceMappingURL=Header.module.css.map */

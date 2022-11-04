@@ -2,6 +2,9 @@
 
 .contact {
   max-width: 1200px;
+  @media screen and (max-width: 768px) {
+    padding: 80px 0px 20px;
+  }
 
   .container {
     width: 100%;

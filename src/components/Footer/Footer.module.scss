@@ -8,6 +8,9 @@
   justify-content: center;
   gap: 10px;
   padding: 100px 0px 20px 0px;
+  @media screen and (max-width: 768px) {
+    padding: 20px 0px;
+  }
   p {
     color: vars.$american-silver;
     span {

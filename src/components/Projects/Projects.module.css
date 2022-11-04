@@ -1,6 +1,11 @@
 .projects {
   max-width: 1200px;
 }
+@media screen and (max-width: 320px) {
+  .projects .heading {
+    font-size: 22px;
+  }
+}
 .projects .list {
   list-style: none;
 }
@@ -92,7 +97,7 @@
 .projects .list .project .content .tech {
   margin: 25px 0px 10px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   list-style: none;
