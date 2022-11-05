@@ -2,6 +2,9 @@
 .hidden {
   display: none;
 }
+.hiddenHeader {
+  margin-top: -200px;
+}
 .header {
   position: fixed;
   top: 0;
