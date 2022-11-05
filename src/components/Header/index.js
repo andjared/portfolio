@@ -6,15 +6,13 @@ import styles from "./Header.module.scss";
 import { Home, AlignRight, XSquare } from "react-feather";
 
 export default function Header() {
-  const [isNavHidden, setIsNavHidden] = useState(false);
   //hide header while scrolling down
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
 
   const handleScroll = () => {
-    const media = window.matchMedia("(min-width : 768px)");
-
-    if (media.matches && window.scrollY > lastScrollY) {
+    if (window.scrollY > lastScrollY) {
       setShowHeader(false);
     } else {
       setShowHeader(true);
@@ -23,30 +21,37 @@ export default function Header() {
     setLastScrollY(window.scrollY);
   };
 
-  const handleNav = () => {
+  const handleSideMenu = () => {
     const media = window.matchMedia("(min-width : 768px)");
     if (media.matches) {
-      setIsNavHidden(false);
+      setIsSideMenuOpen(false);
     }
   };
 
   useEffect(() => {
+    isSideMenuOpen
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "unset");
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleNav);
+    window.addEventListener("resize", handleSideMenu);
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleNav);
+      window.removeEventListener("resize", handleSideMenu);
     };
-  }, [lastScrollY]);
+  }, [lastScrollY, isSideMenuOpen]);
 
   return (
-    <header className={showHeader ? styles.header : styles.hidden}>
+    <header
+      className={
+        showHeader ? styles.header : `${styles.header} ${styles.hiddenHeader}`
+      }
+    >
       <a href="#home">
-        <div className={isNavHidden ? styles.hidden : styles.home}>
+        <div className={isSideMenuOpen ? styles.hidden : styles.home}>
           <Home size={25} />
         </div>
       </a>
-      <nav className={isNavHidden ? styles.hiddenNav : styles.nav}>
+      <nav className={isSideMenuOpen ? styles.hiddenNav : styles.nav}>
         <div className={styles.navLinks}>
           <ul>
             <li>
@@ -74,20 +79,20 @@ export default function Header() {
           </div>
         </div>
         <button
-          className={isNavHidden ? styles.hidden : styles.btn}
-          onClick={() => setIsNavHidden((prev) => !prev)}
+          className={isSideMenuOpen ? styles.hidden : styles.btn}
+          onClick={() => setIsSideMenuOpen((prev) => !prev)}
         >
           <AlignRight size={30} />
         </button>
-        <div className={isNavHidden ? styles.hiddenMenu : styles.hidden}>
+        <div className={isSideMenuOpen ? styles.sideMenu : styles.hidden}>
           <button
-            className={isNavHidden ? styles.btn : styles.hidden}
-            onClick={() => setIsNavHidden((prev) => !prev)}
+            className={isSideMenuOpen ? styles.btn : styles.hidden}
+            onClick={() => setIsSideMenuOpen((prev) => !prev)}
           >
             <XSquare size={35} />
           </button>
-          <div className={styles.hiddenMenuLinks}>
-            <ul onClick={() => setIsNavHidden((prev) => !prev)}>
+          <div className={styles.sideMenuLinks}>
+            <ul onClick={() => setIsSideMenuOpen((prev) => !prev)}>
               <li>
                 <a href="#about">About Me</a>
               </li>

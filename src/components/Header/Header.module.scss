@@ -2,6 +2,9 @@
 .hidden {
   display: none;
 }
+.hiddenHeader {
+  margin-top: -200px;
+}
 .header {
   position: fixed;
   top: 0;
@@ -112,7 +115,7 @@
       .navLinks {
         display: none;
       }
-      .hiddenMenu {
+      .sideMenu {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -127,7 +130,7 @@
           color: vars.$american-silver;
           background: none;
         }
-        .hiddenMenuLinks {
+        .sideMenuLinks {
           text-align: center;
           padding: 0px 20px;
           display: flex;
