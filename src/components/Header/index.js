@@ -21,7 +21,7 @@ export default function Header() {
     setLastScrollY(window.scrollY);
   };
 
-  const handleNav = () => {
+  const handleSideMenu = () => {
     const media = window.matchMedia("(min-width : 768px)");
     if (media.matches) {
       setIsSideMenuOpen(false);
@@ -32,16 +32,13 @@ export default function Header() {
     isSideMenuOpen
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "unset");
-  }, [isSideMenuOpen]);
-
-  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleNav);
+    window.addEventListener("resize", handleSideMenu);
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleNav);
+      window.removeEventListener("resize", handleSideMenu);
     };
-  }, [lastScrollY]);
+  }, [lastScrollY, isSideMenuOpen]);
 
   return (
     <header
@@ -87,14 +84,14 @@ export default function Header() {
         >
           <AlignRight size={30} />
         </button>
-        <div className={isSideMenuOpen ? styles.hiddenMenu : styles.hidden}>
+        <div className={isSideMenuOpen ? styles.sideMenu : styles.hidden}>
           <button
             className={isSideMenuOpen ? styles.btn : styles.hidden}
             onClick={() => setIsSideMenuOpen((prev) => !prev)}
           >
             <XSquare size={35} />
           </button>
-          <div className={styles.hiddenMenuLinks}>
+          <div className={styles.sideMenuLinks}>
             <ul onClick={() => setIsSideMenuOpen((prev) => !prev)}>
               <li>
                 <a href="#about">About Me</a>
