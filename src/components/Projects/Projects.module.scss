@@ -27,7 +27,6 @@
       }
 
       .content {
-        pointer-events: none;
         position: relative;
         grid-column: 1 / 7;
         grid-row: 1 / -1;
@@ -37,6 +36,7 @@
           grid-column: 1 / 9;
         }
         @media screen and (max-width: 768px) {
+          pointer-events: none;
           display: flex;
           height: 100%;
           flex-direction: column;
