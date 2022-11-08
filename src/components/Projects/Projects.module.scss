@@ -115,6 +115,7 @@
           margin-top: 10px;
           margin-left: -10px;
           color: vars.$lightest-slate;
+          pointer-events: auto;
           a {
             display: flex;
             padding: 10px;
