@@ -55,6 +55,29 @@
       margin-bottom: 8px;
     }
   }
+  .modal {
+    padding: 25px 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    color: vars.$saphire;
+    font-size: vars.$fs-lg;
+    background-color: vars.$lightest-slate;
+    transition: vars.$transition;
+    text-align: justify;
+    button {
+      min-width: 100px;
+      margin-top: 8px;
+      color: vars.$saphire;
+      font-weight: 600;
+      padding: 15px;
+      border: 1px solid vars.$lightest-slate;
+      outline: none;
+      &:hover {
+        background-color: vars.$american-silver;
+      }
+    }
+  }
   .info {
     display: flex;
     margin: auto;
