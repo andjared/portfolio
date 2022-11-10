@@ -58,15 +58,11 @@ export default function Contact() {
       <div className={styles.container}>
         <div>
           {showMessage ? (
-            <div className={showMessage ? styles.modal : styles.hidden}>
+            <div className={styles.modal}>
               <Modal success={messageStatus} closeMessage={handleModal} />
             </div>
           ) : (
-            <form
-              onSubmit={handleSubmit}
-              disabled={messageStatus}
-              className={showMessage ? styles.hidden : null}
-            >
+            <form onSubmit={handleSubmit}>
               <label htmlFor="name">Name:</label>
               <input
                 type="text"
@@ -85,7 +81,6 @@ export default function Contact() {
                 value={formData.email || ""}
                 required
               />
-
               <label htmlFor="message" id="message">
                 Message:
               </label>
@@ -97,7 +92,6 @@ export default function Contact() {
                 value={formData.message || ""}
                 required
               />
-
               <button type="submit" value="submit">
                 Send
               </button>
