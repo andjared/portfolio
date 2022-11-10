@@ -6,6 +6,9 @@
     padding: 80px 0px 20px;
   }
 }
+.contact .hidden {
+  display: none;
+}
 .contact .container {
   width: 100%;
   display: grid;
@@ -62,6 +65,31 @@
   width: 100%;
   resize: vertical;
   margin-bottom: 8px;
+}
+.contact .modal {
+  padding: 25px 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  color: #2e5266;
+  font-size: 18px;
+  background-color: #d3d0cb;
+  transition: display 3s;
+  -webkit-animation: fade-in 3s linear;
+          animation: fade-in 3s linear;
+  text-align: justify;
+}
+.contact .modal button {
+  min-width: 100px;
+  margin-top: 8px;
+  color: #2e5266;
+  font-weight: 600;
+  padding: 15px;
+  border: 1px solid #d3d0cb;
+  outline: none;
+}
+.contact .modal button:hover {
+  background-color: #f3db74;
 }
 .contact .info {
   display: flex;

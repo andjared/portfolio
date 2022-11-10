@@ -62,7 +62,7 @@ export default function Contact() {
               <Modal success={messageStatus} closeMessage={handleModal} />
             </div>
           ) : (
-            <form onSubmit={handleSubmit} disabled={messageStatus}>
+            <form onSubmit={handleSubmit}>
               <label htmlFor="name">Name:</label>
               <input
                 type="text"
@@ -81,7 +81,6 @@ export default function Contact() {
                 value={formData.email || ""}
                 required
               />
-
               <label htmlFor="message" id="message">
                 Message:
               </label>
@@ -93,7 +92,6 @@ export default function Contact() {
                 value={formData.message || ""}
                 required
               />
-
               <button type="submit" value="submit">
                 Send
               </button>

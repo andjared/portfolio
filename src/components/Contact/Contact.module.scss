@@ -5,7 +5,9 @@
   @media screen and (max-width: 768px) {
     padding: 80px 0px 20px;
   }
-
+  .hidden {
+    display: none;
+  }
   .container {
     width: 100%;
     display: grid;
@@ -63,7 +65,7 @@
     color: vars.$saphire;
     font-size: vars.$fs-lg;
     background-color: vars.$lightest-slate;
-    transition: vars.$transition;
+    animation: fade-in 1s;
     text-align: justify;
     button {
       min-width: 100px;
@@ -73,6 +75,7 @@
       padding: 15px;
       border: 1px solid vars.$lightest-slate;
       outline: none;
+
       &:hover {
         background-color: vars.$american-silver;
       }
@@ -110,6 +113,14 @@
     }
     .info {
       display: none;
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 }

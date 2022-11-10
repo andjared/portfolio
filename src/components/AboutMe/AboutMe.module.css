@@ -58,8 +58,10 @@
   max-width: 100%;
   display: block;
 }
-.section .inner .image .wrapper img:hover {
-  filter: brightness(120%) drop-shadow(4px 4px 8px rgb(212, 227, 237));
+@media (hover: hover) {
+  .section .inner .image .wrapper img:hover {
+    filter: brightness(120%) drop-shadow(4px 4px 8px rgb(212, 227, 237));
+  }
 }
 @media screen and (max-width: 768px) {
   .section .inner {
