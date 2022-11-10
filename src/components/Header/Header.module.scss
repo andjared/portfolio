@@ -1,6 +1,7 @@
 @use "../../styles/vars.scss";
 .hidden {
   display: none;
+  transition: vars.$transition;
 }
 .hiddenHeader {
   margin-top: -200px;
@@ -85,9 +86,6 @@
     .btn {
       display: none;
     }
-    .hiddenMenu {
-      display: none;
-    }
   }
   @media screen and (max-width: 768px) {
     .nav {
@@ -105,9 +103,8 @@
 
     .hiddenNav {
       display: block;
-      transition: vars.$transition;
+      animation: left-to-right linear 0.2s forwards;
       position: absolute;
-      right: 0;
       top: 0;
       width: min(40vw, 400px);
       background-color: vars.$saphire;
@@ -165,6 +162,15 @@
           }
         }
       }
+    }
+  }
+  @keyframes left-to-right {
+    from {
+      left: 0;
+    }
+    to {
+      left: 100%;
+      transform: translateX(-100%);
     }
   }
 }

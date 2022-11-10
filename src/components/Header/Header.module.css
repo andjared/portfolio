@@ -1,5 +1,10 @@
 .hidden {
   display: none;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hiddenHeader {
+  margin-top: -200px;
 }
 
 .header {
@@ -89,9 +94,6 @@
 .header .nav .btn {
   display: none;
 }
-.header .nav .hiddenMenu {
-  display: none;
-}
 @media screen and (max-width: 768px) {
   .header .nav .navLinks {
     display: none;
@@ -105,9 +107,9 @@
   }
   .header .hiddenNav {
     display: block;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-animation: left-to-right linear 0.2s forwards;
+            animation: left-to-right linear 0.2s forwards;
     position: absolute;
-    right: 0;
     top: 0;
     width: min(40vw, 400px);
     background-color: #2e5266;
@@ -116,7 +118,7 @@
   .header .hiddenNav .navLinks {
     display: none;
   }
-  .header .hiddenNav .hiddenMenu {
+  .header .hiddenNav .sideMenu {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,14 +126,14 @@
     justify-content: center;
     height: 100vh;
   }
-  .header .hiddenNav .hiddenMenu button {
+  .header .hiddenNav .sideMenu button {
     position: absolute;
     top: 10px;
     right: 10px;
     color: #f3db74;
     background: none;
   }
-  .header .hiddenNav .hiddenMenu .hiddenMenuLinks {
+  .header .hiddenNav .sideMenu .sideMenuLinks {
     text-align: center;
     padding: 0px 20px;
     display: flex;
@@ -140,28 +142,46 @@
     font-size: clamp(14px, 4vw, 18px);
     color: #d3d0cb;
   }
-  .header .hiddenNav .hiddenMenu .hiddenMenuLinks ul {
+  .header .hiddenNav .sideMenu .sideMenuLinks ul {
     list-style: none;
   }
-  .header .hiddenNav .hiddenMenu .hiddenMenuLinks ul li {
+  .header .hiddenNav .sideMenu .sideMenuLinks ul li {
     margin: 0px auto 10px;
   }
-  .header .hiddenNav .hiddenMenu .hiddenMenuLinks ul li a {
+  .header .hiddenNav .sideMenu .sideMenuLinks ul li a {
     text-decoration: none;
     padding: 3px 20px 20px;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
-  .header .hiddenNav .hiddenMenu .hiddenMenuLinks ul li a:hover {
+  .header .hiddenNav .sideMenu .sideMenuLinks ul li a:hover {
     color: #f3db74;
   }
-  .header .hiddenNav .hiddenMenu .hiddenMenuLinks .resume {
+  .header .hiddenNav .sideMenu .sideMenuLinks .resume {
     padding: 12px 20px;
     margin: 10% auto 0px;
     border: 1px solid #f3db74;
     border-radius: 4px;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
-  .header .hiddenNav .hiddenMenu .hiddenMenuLinks .resume:hover {
+  .header .hiddenNav .sideMenu .sideMenuLinks .resume:hover {
     color: #f3db74;
+  }
+}
+@-webkit-keyframes left-to-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+}
+@keyframes left-to-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+    transform: translateX(-100%);
   }
 }/*# sourceMappingURL=Header.module.css.map */

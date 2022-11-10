@@ -57,48 +57,53 @@ export default function Contact() {
       <h2 className="heading">Get in touch</h2>
       <div className={styles.container}>
         <div>
-          {showMessage ? (
-            <div className={styles.modal}>
-              <Modal success={messageStatus} closeMessage={handleModal} />
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} disabled={messageStatus}>
-              <label htmlFor="name">Name:</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                onChange={handleChange}
-                value={formData.name || ""}
-                required
-              />
-              <label htmlFor="email">Email:</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                onChange={handleChange}
-                value={formData.email || ""}
-                required
-              />
+          <div className={showMessage ? styles.modal : styles.hidden}>
+            <Modal
+              success={messageStatus}
+              closeMessage={handleModal}
+              show={showMessage}
+            />
+          </div>
+          <form
+            onSubmit={handleSubmit}
+            disabled={messageStatus}
+            className={showMessage ? styles.hidden : null}
+          >
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              onChange={handleChange}
+              value={formData.name || ""}
+              required
+            />
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              onChange={handleChange}
+              value={formData.email || ""}
+              required
+            />
 
-              <label htmlFor="message" id="message">
-                Message:
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                rows="8"
-                onChange={handleChange}
-                value={formData.message || ""}
-                required
-              />
+            <label htmlFor="message" id="message">
+              Message:
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              rows="8"
+              onChange={handleChange}
+              value={formData.message || ""}
+              required
+            />
 
-              <button type="submit" value="submit">
-                Send
-              </button>
-            </form>
-          )}
+            <button type="submit" value="submit">
+              Send
+            </button>
+          </form>
         </div>
 
         <div className={styles.info}>
