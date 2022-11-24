@@ -4,49 +4,41 @@ import styles from "./Work.module.scss";
 import { data } from "./data.js";
 
 export default function Work() {
-  const [isActive, setIsActive] = useState(1);
+  const [isActive, setIsActive] = useState(0);
+
+  const { role, company, range, duties } = data[isActive];
 
   return (
     <section id="work-experience" className={styles.work}>
       <h2 className="heading">Work experience</h2>
       <div className={styles.inner}>
-        <div className={styles.jobs}>
-          {data.map((job) => {
+        <div className={styles.tabs}>
+          {data.map((job, index) => {
             return (
               <button
                 key={job.department}
-                className={
-                  isActive === job.id
-                    ? `${styles.btn} ${styles.active}`
-                    : styles.btn
-                }
-                onClick={() => setIsActive(job.id)}
+                className={`${styles.btn} ${
+                  index === isActive && styles.active
+                }`}
+                onClick={() => setIsActive(index)}
               >
                 <span>{job.department}</span>
               </button>
             );
           })}
         </div>
-        {data.map((job) => {
-          const { role, company, range, id, duties } = job;
-          return (
-            <div
-              key={id}
-              className={isActive === id ? styles.description : styles.hidden}
-            >
-              <h3>
-                <span className={styles.role}>{role}</span>
-                <span className={styles.company}>&nbsp;@&nbsp; {company}</span>
-              </h3>
-              <p className={styles.range}>{range}</p>
-              <ul>
-                {duties.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          );
-        })}
+        <article key={range} className={styles.description}>
+          <h3>
+            <span className={styles.role}>{role}</span>
+            <span className={styles.company}>&nbsp;@&nbsp; {company}</span>
+          </h3>
+          <p className={styles.range}>{range}</p>
+          <ul>
+            {duties.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </article>
       </div>
     </section>
   );
