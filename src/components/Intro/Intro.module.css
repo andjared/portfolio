@@ -8,27 +8,32 @@
   align-items: flex-start;
   padding: 0px;
 }
-.intro .small {
+
+.small {
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   font-size: clamp(14px, 5vw, 16px);
   font-weight: 400;
   color: #f3db74;
 }
-.intro .big {
+
+.big {
   margin: 0px;
   font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
   font-size: clamp(40px, 8vw, 80px);
 }
-.intro .name {
+
+.name {
   color: #d3d0cb;
   margin: 0px;
 }
-.intro .subheading {
+
+.subheading {
   margin-top: 10px;
   line-height: 0.9;
   color: rgb(212, 227, 237);
 }
-.intro .text {
+
+.text {
   margin: 20px 0px 0px;
   max-width: 540px;
 }/*# sourceMappingURL=Intro.module.css.map */
