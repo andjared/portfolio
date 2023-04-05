@@ -2,125 +2,139 @@
 
 .contact {
   max-width: 1200px;
+
   @media screen and (max-width: 768px) {
     padding: 80px 0px 20px;
+    margin: 0px auto 50px;
   }
-  .hidden {
-    display: none;
-  }
-  .container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 100px;
-    @media screen and (max-width: 1080px) {
-      gap: 40px;
-    }
-  }
-  .disabled {
-    pointer-events: none;
-    opacity: 0.8;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-    label {
-      display: block;
-      margin: 8px 0px;
-    }
-    input,
-    textarea,
-    button[type="submit"] {
-      padding: 15px;
-      border: 1px solid vars.$american-silver;
-      outline: none;
-    }
-    input {
-      width: 100%;
-      &::placeholder {
-        color: vars.$saphire;
-      }
-    }
-    button[type="submit"] {
-      min-width: 100px;
-      color: vars.$saphire;
-      font-weight: 600;
-      &:hover {
-        background-color: vars.$american-silver;
-      }
-    }
-    textarea {
-      width: 100%;
-      resize: vertical;
-      margin-bottom: 8px;
-    }
-  }
-  .modal {
-    padding: 25px 20px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    color: vars.$saphire;
-    font-size: vars.$fs-lg;
-    background-color: vars.$lightest-slate;
-    animation: fade-in 1s;
-    text-align: justify;
-    button {
-      min-width: 100px;
-      margin-top: 8px;
-      color: vars.$saphire;
-      font-weight: 600;
-      padding: 15px;
-      border: 1px solid vars.$lightest-slate;
-      outline: none;
+}
 
-      &:hover {
-        background-color: vars.$american-silver;
-      }
-    }
-  }
-  .info {
-    display: flex;
-    margin: auto;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-items: center;
-    gap: 20px;
-    .mail,
-    .phone,
-    .address {
-      display: flex;
-      max-width: 100%;
-      a {
-        display: flex;
-      }
-      color: vars.$american-silver;
-      span {
-        font-size: vars.$fs-lg;
-        display: inline-block;
-        margin-left: 10px;
-        color: vars.$slate;
-      }
-    }
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 100px;
+  @media screen and (max-width: 1080px) {
+    gap: 40px;
   }
   @media screen and (max-width: 768px) {
-    margin: 0px auto 50px;
-    .container {
-      display: flex;
-      flex-direction: column;
-    }
-    .info {
-      display: none;
-    }
+    display: flex;
+    flex-direction: column;
   }
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+form label {
+  display: block;
+  margin: 8px 0px;
+}
+
+form input,
+textarea,
+button[type="submit"] {
+  padding: 15px;
+  border: 1px solid vars.$american-silver;
+  outline: none;
+}
+
+form input {
+  width: 100%;
+  &::placeholder {
+    color: vars.$saphire;
+  }
+}
+
+form button[type="submit"] {
+  min-width: 100px;
+  color: vars.$saphire;
+  font-weight: 600;
+  &:hover {
+    background-color: vars.$american-silver;
+  }
+}
+
+form textarea {
+  width: 100%;
+  resize: vertical;
+  margin-bottom: 8px;
+}
+
+.info {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: center;
+  gap: 20px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.info .mail,
+.phone,
+.address {
+  display: flex;
+  max-width: 100%;
+  a {
+    display: flex;
+  }
+  color: vars.$american-silver;
+  span {
+    font-size: vars.$fs-lg;
+    display: inline-block;
+    margin-left: 10px;
+    color: vars.$slate;
+  }
+}
+
+.modal {
+  padding: 25px 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  color: vars.$saphire;
+  font-size: vars.$fs-lg;
+  background-color: vars.$lightest-slate;
+  animation: fade-in 1s;
+  text-align: justify;
+}
+
+.modal button {
+  min-width: 100px;
+  margin-top: 8px;
+  color: vars.$saphire;
+  font-weight: 600;
+  padding: 15px;
+  border: 1px solid vars.$lightest-slate;
+  outline: none;
+
+  &:hover {
+    background-color: vars.$american-silver;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

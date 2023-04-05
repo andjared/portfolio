@@ -7,14 +7,14 @@
   gap: 10px;
   min-height: 340px;
 }
-.work .inner .jobs {
+.work .inner .tabs {
   display: flex;
   flex-direction: column;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
-.work .inner .jobs .btn {
+.work .inner .tabs .btn {
   width: 100%;
   height: 42px;
   display: flex;
@@ -28,11 +28,11 @@
   text-align: left;
   white-space: nowrap;
 }
-.work .inner .jobs .btn:hover {
+.work .inner .tabs .btn:hover {
   background-color: rgb(212, 227, 237);
   color: #2e5266;
 }
-.work .inner .jobs .active {
+.work .inner .tabs .active {
   color: #2e5266;
   background-color: #d3d0cb;
   border-color: #f3db74;

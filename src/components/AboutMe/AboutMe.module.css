@@ -3,19 +3,22 @@
   max-width: 900px;
   opacity: 1;
 }
-.section .inner {
+
+.inner {
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 50px;
 }
-.section .inner .text p {
+
+.inner .text p {
   margin: 0px 0px 10px;
   text-align: justify;
 }
-.section .inner .text .stack {
+.inner .text .stack {
   color: #f3db74;
 }
-.section .inner .list {
+
+.list {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(2, minmax(140px, 200px));
@@ -23,28 +26,32 @@
   margin: 20px 0px 0px;
   padding: 0;
 }
-.section .inner .list li {
+
+.list li {
   position: relative;
   padding-left: 20px;
   font-size: 14px;
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   margin-bottom: 10px;
 }
-.section .inner .list li::before {
+.list li::before {
   content: "▹";
   position: absolute;
   left: 0px;
   color: #f3db74;
 }
-.section .inner .image {
+
+.image {
   max-width: 300px;
   position: relative;
 }
-.section .inner .image .wrapper {
+
+.image .wrapper {
   width: 100%;
   position: relative;
 }
-.section .inner .image .wrapper::after {
+
+.image .wrapper::after {
   content: "";
   position: absolute;
   top: 20px;
@@ -54,20 +61,22 @@
   width: 100%;
   z-index: -1;
 }
-.section .inner .image .wrapper img {
+
+img {
   max-width: 100%;
   display: block;
 }
 @media (hover: hover) {
-  .section .inner .image .wrapper img:hover {
+  img:hover {
     filter: brightness(120%) drop-shadow(4px 4px 8px rgb(212, 227, 237));
   }
 }
+
 @media screen and (max-width: 768px) {
-  .section .inner {
+  .inner {
     display: block;
   }
-  .section .inner .image {
+  .inner .image {
     margin: 50px auto 0px;
     width: 70%;
   }
