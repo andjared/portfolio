@@ -12,23 +12,26 @@
     padding: 20px 0px;
   }
 }
+
 .wrapper p {
   color: #f3db74;
 }
 .wrapper p span {
   color: #d3d0cb;
 }
-.wrapper .social {
+
+.social {
   display: none;
 }
+
 @media screen and (max-width: 768px) {
-  .wrapper .social {
+  .social {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  .wrapper .social li a {
+  .social li a {
     font-size: 20px;
     padding: 12px;
   }
