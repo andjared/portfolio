@@ -62,12 +62,12 @@
   z-index: -1;
 }
 
-img {
+.image img {
   max-width: 100%;
   display: block;
 }
 @media (hover: hover) {
-  img:hover {
+  .image img:hover {
     filter: brightness(120%) drop-shadow(4px 4px 8px rgb(212, 227, 237));
   }
 }

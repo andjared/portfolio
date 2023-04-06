@@ -1,15 +1,12 @@
 .projects {
   max-width: 1200px;
 }
-@media screen and (max-width: 320px) {
-  .projects .heading {
-    font-size: 22px;
-  }
-}
-.projects .list {
+
+.list {
   list-style: none;
 }
-.projects .list .project {
+
+.project {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
@@ -17,32 +14,33 @@
   position: relative;
   gap: 10px;
 }
-.projects .list .project:not(:last-of-type) {
+.project:not(:last-of-type) {
   margin-bottom: 100px;
 }
 @media screen and (max-width: 1080px) {
-  .projects .list .project:not(:last-of-type) {
+  .project:not(:last-of-type) {
     margin-bottom: 70px;
   }
 }
 @media (max-width: 480px) {
-  .projects .list .project:not(:last-of-type) {
+  .project:not(:last-of-type) {
     margin-bottom: 30px;
   }
 }
-.projects .list .project .content {
+
+.content {
   position: relative;
   grid-column: 1/7;
   grid-row: 1/-1;
   z-index: 2;
 }
 @media screen and (max-width: 1080px) {
-  .projects .list .project .content {
+  .content {
     grid-column: 1/9;
   }
 }
 @media screen and (max-width: 768px) {
-  .projects .list .project .content {
+  .content {
     pointer-events: none;
     display: flex;
     height: 100%;
@@ -55,28 +53,24 @@
   }
 }
 @media (max-width: 480px) {
-  .projects .list .project .content {
+  .content {
     padding: 30px 25px 20px;
   }
 }
-.projects .list .project .content .overline {
-  margin: 10px 0px;
-  color: #f3db74;
-  font-size: 13px;
-  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-}
-.projects .list .project .content .title {
+
+.content .title {
   font-size: clamp(24px, 5vw, 28px);
   color: #d3d0cb;
   margin: 0px 0px 10px;
   font-weight: 600;
 }
 @media screen and (max-width: 768px) {
-  .projects .list .project .content .title {
+  .content .title {
     margin: 0px 0px 20px;
   }
 }
-.projects .list .project .content .description {
+
+.content .description {
   background-color: #d3d0cb;
   color: #2e5266;
   padding: 25px;
@@ -87,14 +81,15 @@
   text-align: justify;
 }
 @media screen and (max-width: 768px) {
-  .projects .list .project .content .description {
+  .content .description {
     color: #d3d0cb;
     padding: 20px 0px;
     background-color: transparent;
     box-shadow: none;
   }
 }
-.projects .list .project .content .tech {
+
+.content .tech {
   margin: 25px 0px 10px;
   display: flex;
   flex-wrap: wrap;
@@ -103,26 +98,27 @@
   list-style: none;
 }
 @media screen and (max-width: 768px) {
-  .projects .list .project .content .tech {
+  .content .tech {
     padding: 10px 0px;
   }
 }
-.projects .list .project .content .tech li {
+.content .tech li {
   margin: 0px 20px 5px 0px;
   font-size: 13px;
   color: #9fb1bc;
   white-space: nowrap;
 }
 @media (max-width: 768px) {
-  .projects .list .project .content .tech {
+  .content .tech {
     margin: 10px 0;
   }
-  .projects .list .project .content .tech li {
+  .content .tech li {
     margin: 0 10px 5px 0;
     color: #d3d0cb;
   }
 }
-.projects .list .project .content .links {
+
+.content .links {
   list-style: none;
   display: flex;
   display: flex;
@@ -133,11 +129,20 @@
   color: #d3d0cb;
   pointer-events: auto;
 }
-.projects .list .project .content .links a {
+
+.links a {
   display: flex;
   padding: 10px;
 }
-.projects .list .project .image {
+
+.content .overline {
+  margin: 10px 0px;
+  color: #f3db74;
+  font-size: 13px;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+.image {
   grid-column: 6/-1;
   grid-row: 1/-1;
   box-shadow: 10px 30px -15px rgba(2, 39, 59, 0.5);
@@ -147,50 +152,56 @@
   background-color: #2e5266;
 }
 @media screen and (max-width: 768px) {
-  .projects .list .project .image {
+  .image {
     grid-column: 1/-1;
     height: 100%;
     opacity: 0.25;
   }
 }
-.projects .list .project .image a {
+
+.image img {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  vertical-align: middle;
+  aspect-ratio: 1/0.5;
+}
+@media screen and (max-width: 768px) {
+  .image img {
+    filter: grayscale(100%) contrast(1) brightness(50%);
+  }
+}
+
+.image a {
   border-radius: 4px;
   height: 100%;
   width: 100%;
   vertical-align: middle;
   background-color: rgb(212, 227, 237);
 }
-.projects .list .project .image a:hover {
-  background-color: transparent;
-  outline: 0;
+.image a:hover {
+  filter: drop-shadow(12px 12px 10px rgb(145, 202, 232)) contrast(95%);
 }
-.projects .list .project .image a .container {
+
+.image .container {
   width: 100%;
   max-width: 100%;
   vertical-align: middle;
   filter: drop-shadow(16px 16px 10px rgba(2, 39, 59, 0.5)) contrast(80%);
 }
-.projects .list .project .image a .container:hover {
-  filter: none;
-}
 @media screen and (max-width: 768px) {
-  .projects .list .project .image a .container {
+  .image .container {
     -o-object-fit: cover;
        object-fit: cover;
     width: auto;
     height: 100%;
   }
 }
-.projects .list .project .image a .container img {
-  width: 100%;
-  max-width: none;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  vertical-align: middle;
-}
-@media screen and (max-width: 768px) {
-  .projects .list .project .image a .container img {
-    filter: grayscale(100%) contrast(1) brightness(50%);
+
+@media screen and (max-width: 320px) {
+  .heading {
+    font-size: 22px;
   }
 }/*# sourceMappingURL=Projects.module.css.map */
