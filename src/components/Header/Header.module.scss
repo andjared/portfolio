@@ -1,11 +1,14 @@
 @use "../../styles/vars.scss";
+
 .hidden {
   display: none;
   transition: vars.$transition;
 }
+
 .hiddenHeader {
   margin-top: -200px;
 }
+
 .header {
   position: fixed;
   top: 0;
@@ -27,150 +30,144 @@
   @media screen and (max-width: 780px) {
     min-height: 70px;
   }
-  .home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: vars.$american-silver;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: vars.$american-silver;
+}
+
+.hiddenNav {
+  display: none;
+}
+
+.hiddenNav {
+  display: block;
+  animation: left-to-right linear 0.2s forwards;
+  position: absolute;
+  top: 0;
+  width: min(40vw, 400px);
+  background-color: vars.$saphire;
+  box-shadow: -10px 0px 30px -15px vars.$saphire-shadow;
+  .navLinks {
+    display: none;
   }
-  .hiddenNav {
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 0px 50px;
+  transition: vars.$transition;
+  @media screen and (max-width: 1080px) {
+    padding: 0px 40px;
+  }
+  @media screen and (max-width: 860px) {
+    padding: 0px 20px;
+  }
+}
+
+.nav .btn {
+  display: none;
+}
+
+.navLinks {
+  display: flex;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: vars.$american-silver;
+  padding: 16px;
+  font-size: vars.$fs-md;
+  transition: vars.$transition;
+  &:hover {
+    color: vars.$lightest-slate;
+  }
+  @media screen and (max-width: 1080px) {
+    padding: 8px;
+  }
+}
+
+.navLinks ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  li {
+    margin: 0px 10px;
+  }
+}
+
+.sideMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.sideMenu button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: vars.$american-silver;
+  background: none;
+}
+
+.sideMenuLinks {
+  text-align: center;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: clamp(vars.$fs-sm, 4vw, vars.$fs-lg);
+  color: vars.$lightest-slate;
+}
+
+.sideMenuLinks ul {
+  list-style: none;
+}
+
+.sideMenuLinks li {
+  margin: 0px auto 10px;
+  a {
+    text-decoration: none;
+    padding: 3px 20px 20px;
+    transition: vars.$transition;
+  }
+}
+
+.sideMenuLinks a:hover {
+  color: vars.$american-silver;
+}
+
+@media screen and (max-width: 768px) {
+  .navLinks {
     display: none;
   }
 
-  .nav {
+  .nav .btn {
     display: flex;
-    justify-content: space-between;
-    justify-content: flex-end;
     align-items: center;
-    width: 100%;
-    padding: 0px 50px;
-    transition: vars.$transition;
-    @media screen and (max-width: 1080px) {
-      padding: 0px 40px;
-    }
-    @media screen and (max-width: 860px) {
-      padding: 0px 20px;
-    }
-
-    .navLinks {
-      display: flex;
-      ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        list-style: none;
-        li {
-          margin: 0px 10px;
-        }
-      }
-      a {
-        text-decoration: none;
-        color: vars.$american-silver;
-        padding: 16px;
-        font-size: vars.$fs-md;
-        transition: vars.$transition;
-        &:hover {
-          color: vars.$lightest-slate;
-        }
-        @media screen and (max-width: 1080px) {
-          padding: 8px;
-        }
-      }
-      .resume {
-        margin-left: 15px;
-        border: 1px solid vars.$american-silver;
-        border-radius: 4px;
-      }
-    }
-
-    .btn {
-      display: none;
-    }
+    justify-content: center;
+    background: none;
+    color: vars.$american-silver;
   }
-  @media screen and (max-width: 768px) {
-    .nav {
-      .navLinks {
-        display: none;
-      }
-      .btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: none;
-        color: vars.$american-silver;
-      }
-    }
+}
 
-    .hiddenNav {
-      display: block;
-      animation: left-to-right linear 0.2s forwards;
-      position: absolute;
-      top: 0;
-      width: min(40vw, 400px);
-      background-color: vars.$saphire;
-      box-shadow: -10px 0px 30px -15px vars.$saphire-shadow;
-      .navLinks {
-        display: none;
-      }
-      .sideMenu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        -webkit-box-align: center;
-        justify-content: center;
-        height: 100vh;
-
-        button {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          color: vars.$american-silver;
-          background: none;
-        }
-        .sideMenuLinks {
-          text-align: center;
-          padding: 0px 20px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          font-size: clamp(vars.$fs-sm, 4vw, vars.$fs-lg);
-          color: vars.$lightest-slate;
-
-          ul {
-            list-style: none;
-            li {
-              margin: 0px auto 10px;
-              a {
-                text-decoration: none;
-                padding: 3px 20px 20px;
-                transition: vars.$transition;
-                &:hover {
-                  color: vars.$american-silver;
-                }
-              }
-            }
-          }
-          .resume {
-            padding: 12px 20px;
-            margin: 10% auto 0px;
-            border: 1px solid vars.$american-silver;
-            border-radius: 4px;
-            transition: vars.$transition;
-            &:hover {
-              color: vars.$american-silver;
-            }
-          }
-        }
-      }
-    }
+@keyframes left-to-right {
+  from {
+    left: 0;
   }
-  @keyframes left-to-right {
-    from {
-      left: 0;
-    }
-    to {
-      left: 100%;
-      transform: translateX(-100%);
-    }
+  to {
+    left: 100%;
+    transform: translateX(-100%);
   }
 }

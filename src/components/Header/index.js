@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import resume from "../../assets/resume.pdf";
 import styles from "./Header.module.scss";
 import { Home, AlignRight, XSquare } from "react-feather";
 
@@ -67,16 +66,6 @@ export default function Header() {
               <a href="#contact">Contact</a>
             </li>
           </ul>
-          <div>
-            <a
-              href={resume}
-              className={styles.resume}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Resume
-            </a>
-          </div>
         </div>
         <button
           className={isSideMenuOpen ? styles.hidden : styles.btn}
@@ -106,14 +95,6 @@ export default function Header() {
                 <a href="#contact">Contact</a>
               </li>
             </ul>
-            <a
-              href={resume}
-              className={styles.resume}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Resume
-            </a>
           </div>
         </div>
       </nav>

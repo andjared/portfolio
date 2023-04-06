@@ -8,27 +8,32 @@
   justify-content: center;
   gap: 10px;
   padding: 100px 0px 20px 0px;
+
   @media screen and (max-width: 768px) {
     padding: 20px 0px;
   }
-  p {
-    color: vars.$american-silver;
-    span {
-      color: vars.$lightest-slate;
-    }
+}
+
+.wrapper p {
+  color: vars.$american-silver;
+  span {
+    color: vars.$lightest-slate;
   }
+}
+
+.social {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
   .social {
-    display: none;
-    @media screen and (max-width: 768px) {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      li a {
-        font-size: vars.$fs-xl;
-        padding: 12px;
-        // color: vars.$american-silver;
-      }
-    }
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .social li a {
+    font-size: vars.$fs-xl;
+    padding: 12px;
   }
 }

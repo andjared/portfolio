@@ -35,7 +35,10 @@ export default function AboutMe() {
             <li>React</li>
             <li>HTML5</li>
             <li>CSS3</li>
+            <li>Tailwind CSS</li>
             <li>Git</li>
+            <li>TypeScript</li>
+            <li>Next.js</li>
           </ul>
         </div>
         <div className={styles.image}>

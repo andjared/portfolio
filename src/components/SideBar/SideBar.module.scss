@@ -10,6 +10,7 @@
     display: none;
   }
 }
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -21,14 +22,16 @@
     width: 1px;
     height: 90px;
   }
-  a {
-    padding: 10px;
-    transition: vars.$transition;
-    &:hover {
-      color: vars.$american-silver;
-    }
+}
+
+.wrapper a {
+  padding: 10px;
+  transition: vars.$transition;
+  &:hover {
+    color: vars.$american-silver;
   }
 }
+
 .left {
   left: 40px;
   right: auto;
@@ -42,6 +45,7 @@
     }
   }
 }
+
 .right {
   right: 40px;
   left: auto;

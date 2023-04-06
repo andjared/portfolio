@@ -9,43 +9,45 @@ export default function Projects() {
       <h2 className={`heading ${styles.heading}`}>Some Things I've done</h2>
       <ul className={styles.list}>
         {data.map((project, index) => {
+          const { img, title, description, tech, github, web } = project;
           return (
             <li key={index} className={styles.project}>
               <div className={styles.image}>
-                <a href={project.web} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={project.web}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.link}
+                >
                   <div className={styles.container}>
-                    <img src={project.img} alt={project.img} />
+                    <img src={img} alt={title} />
                   </div>
                 </a>
               </div>
               <div className={styles.content}>
                 <div>
                   <p className={styles.overline}>Featured Project</p>
-                  <h3 className={styles.title}>{project.title}</h3>
+                  <h3 className={styles.title}>{title}</h3>
                   <div className={styles.description}>
-                    <p>{project.description}</p>
+                    <p>{description}</p>
                   </div>
                   <ul className={styles.tech}>
-                    {project.tech.map((item, index) => {
+                    {tech.map((item, index) => {
                       return <li key={index}>{item}</li>;
                     })}
                   </ul>
                   <div className={styles.links}>
                     <>
-                      {project.github && (
+                      {github && (
                         <a
-                          href={project.github}
+                          href={github}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <GitHub size={25} />
                         </a>
                       )}
-                      <a
-                        href={project.web}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href={web} target="_blank" rel="noopener noreferrer">
                         <ExternalLink size={25} />
                       </a>
                     </>
