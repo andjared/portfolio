@@ -33,7 +33,7 @@ export default function Work() {
             <span className={styles.company}>&nbsp;@&nbsp; {company}</span>
           </h3>
           <p className={styles.range}>{range}</p>
-          <ul>
+          <ul className={styles.duties}>
             {duties.map((item, index) => (
               <li key={index}>{item}</li>
             ))}

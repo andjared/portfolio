@@ -175,9 +175,6 @@
   max-width: 100%;
   vertical-align: middle;
   filter: drop-shadow(16px 16px 10px vars.$saphire-shadow) contrast(80%);
-  // &:hover {
-  //   filter: none;
-  // }
 
   @media screen and (max-width: 768px) {
     object-fit: cover;
