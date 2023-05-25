@@ -1,15 +1,38 @@
 export const data = [
   {
-    img: require("../../assets/webshop.jpg"),
-    title: "Jewelry Webshop",
+    img: require("../../assets/admin.png"),
+    title: "Web Shop Admin Panel",
     description: `
-             Simple app built with React and TypeScript. User has option of adding and removing products from cart, and also to manage desired quantity for each product. In search bar products are filtered by title and by clicking some of the options it navigates to chosen product details page. Used React Context as a global state managment tool.
-            `,
-    tech: ["React.js", "Typescript", "CSS Modules"],
+    Designed and implemented a simple and complete front end solution for webshop. Solution consists of three parts: app, admin and api.
+    Worked on CRUD app that provides admin with options for creating, deleting, and editing products.
+    `,
+    tech: ["Next.js", "Typescript", "TailwindCSS"],
+
+    github: "https://github.com/andjared/webshop_admin_panel",
+  },
+  {
+    img: require("../../assets/webshop.jpg"),
+    title: "Web Shop",
+    description: `
+    Implemented features such as filtering items, managing cart items, managing desired quantity, posting comments, etc. `,
+
+    tech: ["React.js", "Typescript", "SCSS", "CSS Modules"],
 
     github: "https://github.com/andjared/typescript_react_webshop",
     web: "https://andjared.github.io/typescript_react_webshop/",
   },
+  {
+    img: require("../../assets/airbnb.jpg"),
+    title: "Airbnb Search Page",
+    description: `Building components and SPA without framework. Implemented principles such as separation of concerns, dependency injection, component isolation and module segragation, tree-shaking, etc. Data is fetched from a local file. It is fully responsive on all devices.
+            
+            `,
+    tech: ["ES6 modules", "Java Script", "CSS modules"],
+
+    github: "https://github.com/andjared/js-modules",
+    web: "https://andjared.github.io/js-modules/",
+  },
+
   {
     img: require("../../assets/drvo.jpg"),
     title: "Dr Vo Shop",
@@ -18,17 +41,6 @@ export const data = [
            `,
     tech: ["React.js", "Sass", "CSS modules", "Bootstrap"],
     web: "https://drvoshop.com/",
-  },
-  {
-    img: require("../../assets/airbnb.jpg"),
-    title: "Airbnb Search Page",
-    description: `
-            Clone of Airbnb Search page built with ES6 modules and native CSS modules. Data are stored in local json file and fetched asynchronously. Worked on this app for practicing purposes of Vanila JS and modular components. It is fully responsive on all devices.
-            `,
-    tech: ["ES6 modules", "Java Script", "CSS3", "HTML5"],
-
-    github: "https://github.com/andjared/js-modules",
-    web: "https://andjared.github.io/js-modules/",
   },
   {
     img: require("../../assets/landessence.jpg"),

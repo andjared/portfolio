@@ -31,14 +31,15 @@ export default function AboutMe() {
           </div>
 
           <ul className={styles.list}>
-            <li>JavaScript (ES6+)</li>
             <li>React</li>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>Tailwind CSS</li>
-            <li>Git</li>
             <li>TypeScript</li>
             <li>Next.js</li>
+            <li>JavaScript (ES6+)</li>
+            <li>Tailwind CSS</li>
+            <li>SCSS</li>
+            <li>CSS3</li>
+            <li>HTML5</li>
+            <li>Git</li>
           </ul>
         </div>
         <div className={styles.image}>
