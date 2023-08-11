@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.a2ffaf34.css",
-    "main.js": "/portfolio/static/js/main.d277fb6d.js",
+    "main.css": "/portfolio/static/css/main.f446a6fc.css",
+    "main.js": "/portfolio/static/js/main.0474fb96.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/slider.png": "/portfolio/static/media/slider.b858aea3c8c828dfad82.png",
     "static/media/portfolio_image.jpg": "/portfolio/static/media/portfolio_image.2f9c5cc19fe3aaa4a686.jpg",
     "static/media/landessence.jpg": "/portfolio/static/media/landessence.318f76ed76d050536929.jpg",
     "static/media/airbnb.jpg": "/portfolio/static/media/airbnb.b6718db0b4acc73c2373.jpg",
+    "static/media/admin.png": "/portfolio/static/media/admin.b569a5f8417cebbaf0d5.png",
     "static/media/drvo.jpg": "/portfolio/static/media/drvo.9a604c50c6a4a18831cb.jpg",
     "static/media/webshop.jpg": "/portfolio/static/media/webshop.41f4e160af789615db08.jpg",
     "index.html": "/portfolio/index.html",
-    "main.a2ffaf34.css.map": "/portfolio/static/css/main.a2ffaf34.css.map",
-    "main.d277fb6d.js.map": "/portfolio/static/js/main.d277fb6d.js.map",
+    "main.f446a6fc.css.map": "/portfolio/static/css/main.f446a6fc.css.map",
+    "main.0474fb96.js.map": "/portfolio/static/js/main.0474fb96.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2ffaf34.css",
-    "static/js/main.d277fb6d.js"
+    "static/css/main.f446a6fc.css",
+    "static/js/main.0474fb96.js"
   ]
 }
