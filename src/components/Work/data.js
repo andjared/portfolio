@@ -6,8 +6,8 @@ export const data = [
     range: "February 2023 - May 2023",
     id: 1,
     duties: [
-      `Worked under supervision of a senior developer. During mentorship I’ve built several projects which helped me to improve my skills and deepen my understanding in the area of front end development. 
-  `,
+      `Worked under supervision of a senior developer.`,
+      `Built several projects which helped me to improve my skills and deepen my understanding in the area of front end development. `,
     ],
   },
   {
