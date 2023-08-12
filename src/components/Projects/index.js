@@ -47,9 +47,11 @@ export default function Projects() {
                           <GitHub size={25} />
                         </a>
                       )}
-                      <a href={web} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink size={25} />
-                      </a>
+                      {web && (
+                        <a href={web} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink size={25} />
+                        </a>
+                      )}
                     </>
                   </div>
                 </div>
